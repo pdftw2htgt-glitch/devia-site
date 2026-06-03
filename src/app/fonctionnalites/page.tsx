@@ -3,12 +3,12 @@ import Link from "next/link";
 const features = [
   {
     title: "Generation IA",
-    description: "Decrivez votre projet en francais courant. DEVIA comprend, structure et chiffre automatiquement.",
+    description: "Decrivez votre projet, ou collez simplement le mail de demande du client. DEVIA comprend, structure et chiffre automatiquement.",
     icon: "&#x2728;",
   },
   {
     title: "Visualisation 3D",
-    description: "Visualisez votre charpente en 3D temps reel directement dans le logiciel. Manipulez, zoomez, exportez.",
+    description: "Conception 3D de votre charpente directement dans le logiciel. Manipulez, zoomez, explorez.",
     icon: "&#x1F4D0;",
   },
   {
@@ -18,13 +18,13 @@ const features = [
   },
   {
     title: "Export PDF",
-    description: "Devis professionnel pret a envoyer au client. Personnalisable avec votre logo et coordonnees.",
+    description: "Devis professionnel pret a envoyer au client. Personnalisable avec logo, coordonnees et apercu 3D.",
     icon: "&#x1F4C4;",
   },
   {
-    title: "Catalogue prix",
-    description: "Renseignez vos prix une fois, DEVIA les applique automatiquement a tous vos devis futurs.",
-    icon: "&#x1F4B0;",
+    title: "Catalogue d'entreprise",
+    description: "Renseignez vos prix et votre catalogue de materiaux. DEVIA les applique automatiquement a tous vos devis futurs.",
+    icon: "&#x1F4D6;",
   },
   {
     title: "Multi-projets",
@@ -40,9 +40,9 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto px-6 py-24">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold tracking-tight text-slate-900 mb-6">
-              Tout ce dont vous avez besoin
+              Tous les outils dont vous avez besoin,
               <br />
-              <span className="text-amber-600">pour des devis pros.</span>
+              <span className="text-amber-600">dans un seul logiciel.</span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed">
               DEVIA est concu pour remplacer entierement votre processus actuel
