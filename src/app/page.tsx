@@ -1,16 +1,23 @@
 import Link from "next/link";
-import CharpenteBackground from "@/components/CharpenteBackground";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
     <>
       {/* HERO - fond sombre avec animation 3D */}
       <section className="relative overflow-hidden bg-slate-950 min-h-[80vh]">
-        {/* Animation 3D en fond */}
-        <CharpenteBackground />
+        {/* Image de fond */}
+        <Image
+          src="/hero-bg.png"
+          alt="Maison ossature bois et structure technique"
+          fill
+          priority
+          className="object-cover object-center"
+        />
 
-        {/* Overlay gradient pour lisibilite du texte */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/40 pointer-events-none" />
+        {/* Voiles sombres pour lisibilite du texte */}
+        <div className="absolute inset-0 bg-slate-950/45 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-slate-950/20 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-32 z-10">
