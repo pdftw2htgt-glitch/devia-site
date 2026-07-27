@@ -23,6 +23,9 @@ export default function Footer() {
           <h3 className="text-white font-semibold mb-4 text-sm">Produit</h3>
           <ul className="space-y-2 text-sm">
             <li><Link href="/fonctionnalites" className="hover:text-white transition-colors">Fonctionnalites</Link></li>
+            <li><Link href="/solutions" className="hover:text-white transition-colors">Solutions</Link></li>
+            <li><Link href="/apprentissage" className="hover:text-white transition-colors">Apprentissage</Link></li>
+            <li><Link href="/actualite" className="hover:text-white transition-colors">Actualite</Link></li>
             <li><Link href="/tarifs" className="hover:text-white transition-colors">Tarifs</Link></li>
             <li><a href="https://devia-iota.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Connexion</a></li>
           </ul>
