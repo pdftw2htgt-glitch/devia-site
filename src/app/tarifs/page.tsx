@@ -17,18 +17,19 @@ export default function PricingPage() {
 
       <section className="pb-24">
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-          {/* OFFRE INSTALLATION */}
+          {/* FORMULE STANDARD */}
           <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
-            <div className="text-sm font-semibold text-slate-500 mb-2">INSTALLATION</div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-2">Acces a vie</h2>
-            <div className="flex items-baseline gap-2 mb-6">
-              <span className="text-5xl font-bold text-slate-900">2 000</span>
+            <div className="text-sm font-semibold text-slate-500 mb-2">FORMULE STANDARD</div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">Installation sans option</h2>
+            <div className="flex items-baseline gap-2 mb-2">
+              <span className="text-sm text-slate-500">a partir de</span>
+              <span className="text-5xl font-bold text-slate-900">3 500</span>
               <span className="text-2xl text-slate-600">&euro;</span>
-              <span className="text-sm text-slate-500 ml-2">paiement unique</span>
             </div>
+            <div className="text-slate-600 font-medium mb-6">puis maintenance 150 &euro; / mois</div>
             <p className="text-slate-600 mb-6">
-              Une seule fois. Vous gardez l&apos;acces a la version achetee
-              indefiniment, meme sans abonnement.
+              DEVIA installe sur votre poste, pret a produire vos devis.
+              La maintenance couvre les mises a jour et le support.
             </p>
             <ul className="space-y-3 mb-8">
               <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Acces complet a DEVIA</li>
@@ -36,40 +37,41 @@ export default function PricingPage() {
               <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Visualisation 3D</li>
               <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Calculs Eurocode 5</li>
               <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Export PDF illimite</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Support email 30 jours</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Mises a jour et support inclus dans la maintenance</li>
             </ul>
             <button className="w-full bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors">
               Acheter DEVIA
             </button>
           </div>
 
-          {/* OFFRE MAINTENANCE */}
+          {/* FORMULE PERSONNALISEE */}
           <div className="bg-amber-50 border-2 border-amber-400 rounded-2xl p-8 shadow-sm relative">
             <div className="absolute -top-3 left-8 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-              RECOMMANDE
+              SUR MESURE
             </div>
-            <div className="text-sm font-semibold text-amber-700 mb-2">MAINTENANCE</div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-2">Mises a jour</h2>
-            <div className="flex items-baseline gap-2 mb-6">
-              <span className="text-5xl font-bold text-slate-900">35</span>
+            <div className="text-sm font-semibold text-amber-700 mb-2">FORMULE PERSONNALISEE</div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">Adaptee a votre entreprise</h2>
+            <div className="flex items-baseline gap-2 mb-2">
+              <span className="text-sm text-slate-500">a partir de</span>
+              <span className="text-5xl font-bold text-slate-900">4 500</span>
               <span className="text-2xl text-slate-600">&euro;</span>
-              <span className="text-sm text-slate-500 ml-2">/ mois</span>
             </div>
+            <div className="text-slate-600 font-medium mb-6">puis 300 &euro; / mois</div>
             <p className="text-slate-600 mb-6">
-              Acces aux nouvelles fonctionnalites, corrections et evolutions
-              du logiciel. Annulable a tout moment.
+              Une installation configuree pour vos besoins, definie ensemble
+              lors d&apos;un entretien : options, catalogue, accompagnement.
             </p>
             <ul className="space-y-3 mb-8">
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Toutes les nouvelles fonctionnalites</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Corrections de bugs prioritaires</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Mises a jour Eurocode</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Support email illimite</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Acces beta nouvelles features</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Annulation libre</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Tout de la formule standard</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Options au choix selon votre activite</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Catalogue de prix integre a l&apos;installation</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Formation de votre equipe</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Support prioritaire</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Evolutions specifiques etudiees</li>
             </ul>
-            <button className="w-full bg-amber-500 text-slate-900 py-3 rounded-lg font-semibold hover:bg-amber-400 transition-colors">
-              Activer la maintenance
-            </button>
+            <Link href="/contact" className="block w-full text-center bg-amber-500 text-slate-900 py-3 rounded-lg font-semibold hover:bg-amber-400 transition-colors">
+              Reserver un entretien
+            </Link>
           </div>
         </div>
 
