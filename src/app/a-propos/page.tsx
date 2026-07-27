@@ -11,7 +11,7 @@ export default function AboutPage() {
             sont submergees de petits devis qui ont peu de chances d&apos;aboutir.
           </p>
           <p>
-            Ces devis prennent en moyenne <strong>2 heures</strong> a chiffrer,
+            Ces devis prennent en moyenne <strong>4 heures</strong> a chiffrer,
             ne sont pas factures, et representent un temps perdu qui pourrait
             etre consacre a des projets plus serieux.
           </p>

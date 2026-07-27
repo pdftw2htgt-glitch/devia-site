@@ -113,7 +113,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Gain de temps</h3>
               <p className="text-slate-600 leading-relaxed">
-                Reduisez a quelques minutes ce qui prenait 2 heures.
+                Reduisez a quelques minutes ce qui prenait 4 heures.
                 Concentrez-vous sur vos vrais chantiers.
               </p>
             </div>
@@ -135,7 +135,7 @@ export default function HomePage() {
 
           <div className="text-lg text-slate-300 leading-relaxed space-y-6 max-w-3xl mx-auto">
             <p>
-              Chaque devis charpente prend en moyenne <strong className="text-amber-400">2 heures</strong> de votre temps
+              Chaque devis charpente prend en moyenne <strong className="text-amber-400">4 heures</strong> de votre temps
               &mdash; un temps non facture, souvent perdu pour des clients qui ne donneront jamais suite.
             </p>
             <p>
