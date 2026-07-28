@@ -34,8 +34,8 @@ export default function HomePage() {
             </h1>
 
             <p className="text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl">
-              Decrivez votre projet en langage naturel. DEVIA genere un devis complet
-              et une visualisation 3D, prets a presenter a vos clients.
+              Un mail de client, quelques clics : DEVIA vous rend un devis chiffre
+              avec sa charpente en 3D, pret a envoyer.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -54,7 +54,7 @@ export default function HomePage() {
             </div>
 
             <p className="text-sm text-slate-400 mt-6">
-              Achat unique. Acces a vie. Mise a jour optionnelle.
+              Achat de la version actuelle. Mises a jour optionnelles.
             </p>
           </div>
         </div>
