@@ -9,7 +9,7 @@ export default function PricingPage() {
             Un prix juste, transparent.
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Achetez DEVIA une fois. Utilisez-le a vie.
+            Achetez DEVIA une fois.
             L&apos;abonnement maintenance est optionnel.
           </p>
         </div>
