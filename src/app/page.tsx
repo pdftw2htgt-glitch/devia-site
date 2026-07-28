@@ -155,6 +155,55 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SPECIFICITES */}
+      <section className="py-24 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">
+              Les specificites de DEVIA
+            </h2>
+            <p className="text-lg text-slate-600">
+              Ce qui fait la difference au quotidien, au-dela des fonctionnalites.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Innovation et croissance</h3>
+              <p className="text-slate-600 leading-relaxed">
+                DEVIA evolue au rythme des technologies d&apos;intelligence artificielle.
+                Chaque avancee majeure de l&apos;IA est integree au logiciel, avec des
+                mises a jour chaque semaine.
+              </p>
+            </div>
+            <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Support a l&apos;ecoute</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Une question, un blocage, une idee : notre equipe repond rapidement,
+                et chaque retour d&apos;artisan influence directement le developpement
+                du logiciel.
+              </p>
+            </div>
+            <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Suivi privilegie et sur mesure</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Un interlocuteur qui connait votre entreprise, votre catalogue et vos
+                habitudes de chiffrage. Un suivi de proximite, pas un ticket anonyme.
+              </p>
+            </div>
+            <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Logiciel sur mesure</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Avec la formule personnalisee, DEVIA s&apos;adapte a votre entreprise :
+                options choisies ensemble, catalogue integre, formation de votre equipe.{" "}
+                <Link href="/tarifs" className="text-amber-600 font-semibold hover:text-amber-700">
+                  Decouvrir la formule personnalisee
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA FINAL */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
