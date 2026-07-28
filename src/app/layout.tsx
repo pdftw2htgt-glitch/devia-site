@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "DEVIA - Logiciel professionnel de devis charpente",
-  description: "Generez vos devis charpente en 30 secondes grace a l'IA. Visualisation 3D, calculs Eurocode, export PDF. L'alternative moderne aux logiciels traditionnels.",
+  description: "Generez vos devis charpente en quelques secondes grace a l'IA. Visualisation 3D, calculs Eurocode, export PDF. L'alternative moderne aux logiciels traditionnels.",
   keywords: ["devis charpente", "logiciel charpente", "charpente IA", "Cadwork alternative", "devis bois"],
 };
 

@@ -8,7 +8,7 @@ export const metadata = {
 const guides = [
   {
     num: "01",
-    title: "Votre premier devis en 30 secondes",
+    title: "Votre premier devis en quelques secondes",
     description: "Decrivez le projet en langage naturel, ou collez le mail de votre client. DEVIA detecte le type de structure, genere le devis et la 3D.",
   },
   {

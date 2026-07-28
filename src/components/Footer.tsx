@@ -14,7 +14,7 @@ export default function Footer() {
           </div>
           <p className="text-sm text-slate-400 max-w-md leading-relaxed">
             Le logiciel professionnel de devis charpente nouvelle generation.
-            Genere vos devis en 30 secondes grace a l&apos;IA.
+            Genere vos devis en quelques secondes grace a l&apos;IA.
           </p>
         </div>
 
