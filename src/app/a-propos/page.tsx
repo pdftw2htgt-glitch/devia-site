@@ -39,6 +39,7 @@ export default function AboutPage() {
             <li><strong>Simplicite.</strong> Un logiciel doit etre evident a utiliser.</li>
             <li><strong>Fiabilite.</strong> Des calculs bases sur les normes officielles, pour des devis solides et defendables.</li>
             <li><strong>Confidentialite.</strong> Vos donnees d&apos;entreprise restent chez vous. Aucun partage avec des IA tierces.</li>
+            <li><strong>Efficacite.</strong> Reduire a quelques minutes ce qui prenait des heures, pour vous concentrer sur vos vrais chantiers.</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">Le projet</h2>
