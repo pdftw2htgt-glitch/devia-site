@@ -61,61 +61,45 @@ export default function HomePage() {
       </section>
 
       {/* 3 BENEFICES */}
-      <section className="py-24 border-t border-slate-200">
+      <section className="py-24 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">
-              Concu pour les professionnels exigeants
-            </h2>
-            <p className="text-lg text-slate-600">
-              Trois piliers fondamentaux : fiabilite, confidentialite, efficacite.
-            </p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">Concu pour les professionnels exigeants</h2>
+            <p className="text-lg text-slate-600">Trois piliers fondamentaux : fiabilite, confidentialite, efficacite.</p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Fiabilite */}
-            <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-5">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-amber-700">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <path d="M9 12l2 2 4-4" />
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-[0_12px_32px_rgba(245,158,11,0.12)]">
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center mb-5 text-white shadow-lg shadow-amber-600/25">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M9 12l2 2 4-4"/>
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Fiabilite</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Calculs structurels bases sur les normes Eurocode 5.
-                Vos devis sont solides, defendables, professionnels.
-              </p>
+              <p className="text-slate-600 leading-relaxed">Calculs structurels bases sur les normes Eurocode 5. Vos devis sont solides, defendables, professionnels.</p>
+              <div className="mt-5 pt-4 border-t border-dashed border-slate-200 text-xs text-slate-500 font-mono">Eurocode 5 &middot; sections <span className="text-amber-700 font-semibold">mini / conseillees</span> &middot; neige et vent par commune</div>
             </div>
-
-            {/* Confidentialite */}
-            <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-5">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-amber-700">
-                  <rect x="3" y="11" width="18" height="11" rx="2" />
-                  <path d="M7 11V7a5 5 0 0110 0v4" />
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-[0_12px_32px_rgba(245,158,11,0.12)]">
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center mb-5 text-white shadow-lg shadow-amber-600/25">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2"/>
+                  <path d="M7 11V7a5 5 0 0110 0v4"/>
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Confidentialite</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Vos projets restent confidentiels. Aucun de vos devis
-                n&apos;est partage ou utilise pour entrainer des IA tierces.
-              </p>
+              <p className="text-slate-600 leading-relaxed">Vos projets restent confidentiels. Aucun de vos devis n&apos;est partage ou utilise pour entrainer des IA tierces.</p>
+              <div className="mt-5 pt-4 border-t border-dashed border-slate-200 text-xs text-slate-500 font-mono">Vos prix restent <span className="text-amber-700 font-semibold">chez vous</span> &middot; aucun entrainement d&apos;IA tierce</div>
             </div>
-
-            {/* Gain de temps */}
-            <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-5">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-amber-700">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 6v6l4 2" />
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-[0_12px_32px_rgba(245,158,11,0.12)]">
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center mb-5 text-white shadow-lg shadow-amber-600/25">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 6v6l4 2"/>
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Gain de temps</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Reduisez a quelques minutes ce qui prenait 4 heures.
-                Concentrez-vous sur vos vrais chantiers.
-              </p>
+              <p className="text-slate-600 leading-relaxed">Reduisez a quelques minutes ce qui prenait 4 heures. Concentrez-vous sur vos vrais chantiers.</p>
+              <div className="mt-5 pt-4 border-t border-dashed border-slate-200 text-xs text-slate-500 font-mono"><span className="text-amber-700 font-semibold">4 heures &rarr; quelques secondes</span> &middot; devis + 3D + calculs</div>
             </div>
           </div>
         </div>
