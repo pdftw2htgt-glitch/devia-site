@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CalculateurRentabilite from "@/components/CalculateurRentabilite";
 
 export default function PricingPage() {
   return (
@@ -74,6 +75,8 @@ export default function PricingPage() {
             </Link>
           </div>
         </div>
+
+        <CalculateurRentabilite />
 
         {/* FAQ courte */}
         <div className="max-w-3xl mx-auto px-6 mt-24">
