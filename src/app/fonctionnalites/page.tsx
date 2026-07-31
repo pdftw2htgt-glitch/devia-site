@@ -4,8 +4,8 @@ const features = [
   {
     eyebrow: "Generation IA",
     title: "Un devis a partir d'une simple description",
-    desc: "Decrivez votre projet en quelques mots, ou collez directement le mail de demande de votre client. DEVIA comprend le langage naturel, identifie le type d'ouvrage, les dimensions et la commune, puis structure un devis complet.",
-    bullets: ["Comprend le langage naturel et le mail client", "Detecte automatiquement le type d'ouvrage", "Pre-remplit les infos depuis un plan PDF ou une photo"],
+    desc: "DEVIA peut creer un devis complet a partir d'une description simple pour les structures classiques. Elle peut analyser et utiliser des plans d'architecte pour des projets plus ambitieux. DEVIA comprend le langage naturel, analyse le type d'ouvrage, les dimensions et la commune, puis structure un devis complet.",
+    bullets: ["Pre-remplit les infos depuis un plan PDF ou une photo", "Reflechit et cree en quelques secondes", "Detecte automatiquement le type d'ouvrage"],
     c: "#f59e0b", tint: "#fffbeb", txt: "#b45309",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z" /></svg>,
   },
