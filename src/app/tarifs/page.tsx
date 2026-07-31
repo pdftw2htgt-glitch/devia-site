@@ -78,12 +78,14 @@ export default function PricingPage() {
 
         <CalculateurRentabilite />
 
-        {/* FAQ courte */}
+        {/* FAQ courte (depliable) */}
         <div className="max-w-3xl mx-auto px-6 mt-24">
-          <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-            Questions frequentes
-          </h2>
-          <div className="space-y-6">
+          <details className="group bg-white border border-slate-200 rounded-2xl shadow-sm">
+            <summary className="flex items-center justify-between cursor-pointer select-none px-8 py-6 list-none [&::-webkit-details-marker]:hidden">
+              <span className="text-xl font-bold text-slate-900">Questions frequentes</span>
+              <span className="w-9 h-9 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-2xl font-semibold leading-none transition-transform duration-200 group-open:rotate-45">+</span>
+            </summary>
+            <div className="space-y-6 px-8 pb-8 pt-4 border-t border-slate-100">
             <div>
               <h3 className="font-semibold text-slate-900 mb-2">L&apos;abonnement est-il obligatoire ?</h3>
               <p className="text-slate-600">Non. Vous pouvez utiliser DEVIA a vie avec votre achat initial. L&apos;abonnement maintenance debloque uniquement les nouvelles versions et le support etendu.</p>
@@ -100,7 +102,8 @@ export default function PricingPage() {
               <h3 className="font-semibold text-slate-900 mb-2">Combien d&apos;ordinateurs puis-je utiliser ?</h3>
               <p className="text-slate-600">Une licence DEVIA est valable pour un utilisateur. Vous pouvez vous connecter depuis n&apos;importe quel ordinateur, mais pas simultanement.</p>
             </div>
-          </div>
+            </div>
+          </details>
         </div>
       </section>
     </>
