@@ -12,7 +12,7 @@ const features = [
   {
     eyebrow: "Visualisation 3D",
     title: "Votre charpente en 3D, prete a montrer",
-    desc: "Chaque devis s'accompagne d'un modele 3D complet : fermes, pannes, chevrons, echantignoles, assemblages. Manipulez, zoomez, tournez autour de la structure. Vos clients comprennent enfin ce qu'ils achetent.",
+    desc: "Chaque devis s'accompagne d'un modele 3D complet : sections calculees pour chaque piece, assemblages pre-definis et export IFC. Manipulez, zoomez, tournez autour de la structure. Vos clients comprennent enfin ce qu'ils achetent.",
     bullets: ["Modele 3D genere automatiquement", "Toutes les pieces detaillees et cotees", "Export IFC vers vos autres logiciels"],
     c: "#3b82f6", tint: "#eff6ff", txt: "#1d4ed8",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 00-1-1.7l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.7l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" /><path d="M3.3 7L12 12l8.7-5M12 22V12" /></svg>,
