@@ -27,9 +27,9 @@ const features = [
   },
   {
     eyebrow: "Bilan carbone",
-    title: "Le carbone stocke par votre charpente",
-    desc: "Le bois stocke du CO2. A partir du volume de bois mis en oeuvre, DEVIA estime le carbone stocke par votre charpente. Un argument ecologique concret et chiffre pour vos clients, vos appels d'offres et les collectivites.",
-    bullets: ["CO2 stocke estime automatiquement", "Valorise le bois, materiau bas carbone", "Un atout pour les marches publics"],
+    title: "DEVIA agit pour la planete",
+    desc: "Une requete DEVIA produit en moyenne 0,0317 kilogramme de CO2 et environ 0,16 litre d'eau. Une empreinte maitrisee et transparente, au service du materiau le plus bas carbone du batiment : le bois.",
+    bullets: ["Vue sur votre empreinte carbone", "Valorise le bois, materiau bas carbone", "Un atout pour les marches publics"],
     c: "#10b981", tint: "#ecfdf5", txt: "#047857",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z" /><path d="M2 21c0-3 1.85-5.36 5.08-6" /></svg>,
   },
