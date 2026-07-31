@@ -16,6 +16,24 @@ export default function Header() {
     { href: "/contact", label: "Contact" },
   ];
 
+  const solutionsMenu = {
+    ouvrages: [
+      { href: "/solutions#charpente-traditionnelle", label: "Charpente traditionnelle", desc: "Fermes, pannes, chevrons calcules" },
+      { href: "/solutions#charpente-industrielle", label: "Charpente industrielle", desc: "Fermettes et grandes series" },
+      { href: "/solutions#construction-bois", label: "Construction bois", desc: "MOB et structures completes" },
+      { href: "/solutions#charpente-couverture", label: "Charpente couverture", desc: "Couverture et calepinage complet" },
+      { href: "/solutions#extension", label: "Extension", desc: "Agrandissements et surelevations" },
+      { href: "/solutions#multi-structure", label: "Multi-structure", desc: "Plusieurs ouvrages, un seul devis" },
+    ],
+    services: [
+      { href: "/solutions#neuf-renovation", label: "Neuf & renovation", desc: "Projets neufs et reprises d'existant" },
+      { href: "/solutions#etude-calcul", label: "Etude & calcul de structure", desc: "Dimensionnement Eurocode 5" },
+      { href: "/solutions#logistique", label: "Logistique", desc: "Metre, debit, approvisionnement" },
+      { href: "/solutions#export-ifc", label: "Export IFC", desc: "Vers vos logiciels de conception" },
+      { href: "/solutions#conception-chiffrage", label: "Conception & chiffrage", desc: "Du plan au devis chiffre" },
+    ],
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -29,15 +47,55 @@ export default function Header() {
 
         {/* Nav desktop */}
         <nav className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-slate-600 hover:text-slate-900 transition-colors text-sm font-medium"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {links.map((link) =>
+            link.href === "/solutions" ? (
+              <div key={link.href} className="relative group">
+                <Link
+                  href="/solutions"
+                  className="flex items-center gap-1 text-slate-600 hover:text-slate-900 transition-colors text-sm font-medium"
+                >
+                  Solutions
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-200 group-hover:rotate-180">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </Link>
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block">
+                  <div className="w-[560px] bg-white border border-slate-200 rounded-2xl shadow-xl p-6 grid grid-cols-2 gap-6">
+                    <div>
+                      <div className="text-xs font-bold uppercase tracking-wide text-slate-400 mb-3">Ouvrages</div>
+                      <div className="flex flex-col gap-1">
+                        {solutionsMenu.ouvrages.map((s) => (
+                          <Link key={s.href} href={s.href} className="rounded-lg px-3 py-2 hover:bg-slate-50 transition-colors">
+                            <div className="text-sm font-semibold text-slate-900">{s.label}</div>
+                            <div className="text-xs text-slate-500">{s.desc}</div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold uppercase tracking-wide text-slate-400 mb-3">Services</div>
+                      <div className="flex flex-col gap-1">
+                        {solutionsMenu.services.map((s) => (
+                          <Link key={s.href} href={s.href} className="rounded-lg px-3 py-2 hover:bg-slate-50 transition-colors">
+                            <div className="text-sm font-semibold text-slate-900">{s.label}</div>
+                            <div className="text-xs text-slate-500">{s.desc}</div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-slate-600 hover:text-slate-900 transition-colors text-sm font-medium"
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </nav>
 
         {/* CTA desktop */}
