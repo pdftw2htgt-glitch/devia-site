@@ -36,8 +36,8 @@ const features = [
   {
     eyebrow: "Export PDF",
     title: "Un devis pro, pret a envoyer",
-    desc: "Votre logo, vos coordonnees, le detail des postes et les vues 3D de la charpente : DEVIA genere un devis PDF professionnel, propre et immediat. Il ne vous reste qu'a l'envoyer.",
-    bullets: ["Devis PDF avec vos coordonnees et logo", "Vues 3D integrees au document", "Pret a envoyer en un clic"],
+    desc: "Votre logo, vos coordonnees, le detail des postes avec leurs prix et les vues 3D de la charpente : DEVIA genere un devis PDF professionnel, chiffre et pret a envoyer. Et avec la formule personnalisee, le design du document s'adapte a l'image de votre entreprise.",
+    bullets: ["Prix et postes detailles sur le document", "Vues 3D integrees au document", "Design personnalisable avec la formule personnalisee"],
     c: "#f43f5e", tint: "#fff1f2", txt: "#be123c",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><path d="M14 2v6h6M9 15h6M9 11h2" /></svg>,
   },
