@@ -123,6 +123,10 @@ export default function SolutionsPage() {
                 </li>
               ))}
             </ul>
+            <Link href={"/solutions/" + s.id} className="inline-flex items-center gap-1 mt-6 text-sm font-semibold hover:underline" style={{ color: s.txt }}>
+              En savoir plus
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </Link>
           </div>
         </section>
       ))}

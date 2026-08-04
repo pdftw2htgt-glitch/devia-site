@@ -18,19 +18,19 @@ export default function Header() {
 
   const solutionsMenu = {
     ouvrages: [
-      { href: "/solutions#charpente-traditionnelle", label: "Charpente traditionnelle", desc: "Fermes, pannes, chevrons calcules" },
-      { href: "/solutions#charpente-industrielle", label: "Charpente industrielle", desc: "Fermettes et grandes series" },
-      { href: "/solutions#construction-bois", label: "Construction bois", desc: "MOB et structures completes" },
-      { href: "/solutions#charpente-couverture", label: "Charpente couverture", desc: "Couverture et calepinage complet" },
-      { href: "/solutions#extension", label: "Extension", desc: "Agrandissements et surelevations" },
-      { href: "/solutions#multi-structure", label: "Multi-structure", desc: "Plusieurs ouvrages, un seul devis" },
+      { href: "/solutions/charpente-traditionnelle", label: "Charpente traditionnelle", desc: "Fermes, pannes, chevrons calcules" },
+      { href: "/solutions/charpente-industrielle", label: "Charpente industrielle", desc: "Fermettes et grandes series" },
+      { href: "/solutions/construction-bois", label: "Construction bois", desc: "MOB et structures completes" },
+      { href: "/solutions/charpente-couverture", label: "Charpente couverture", desc: "Couverture et calepinage complet" },
+      { href: "/solutions/extension", label: "Extension", desc: "Agrandissements et surelevations" },
+      { href: "/solutions/multi-structure", label: "Multi-structure", desc: "Plusieurs ouvrages, un seul devis" },
     ],
     services: [
-      { href: "/solutions#neuf-renovation", label: "Neuf & renovation", desc: "Projets neufs et reprises d'existant" },
-      { href: "/solutions#etude-calcul", label: "Etude & calcul de structure", desc: "Dimensionnement Eurocode 5" },
-      { href: "/solutions#logistique", label: "Logistique", desc: "Metre, debit, approvisionnement" },
-      { href: "/solutions#export-ifc", label: "Export IFC", desc: "Vers vos logiciels de conception" },
-      { href: "/solutions#conception-chiffrage", label: "Conception & chiffrage", desc: "Du plan au devis chiffre" },
+      { href: "/solutions/neuf-renovation", label: "Neuf & renovation", desc: "Projets neufs et reprises d'existant" },
+      { href: "/solutions/etude-calcul", label: "Etude & calcul de structure", desc: "Dimensionnement Eurocode 5" },
+      { href: "/solutions/logistique", label: "Logistique", desc: "Metre, debit, approvisionnement" },
+      { href: "/solutions/export-ifc", label: "Export IFC", desc: "Vers vos logiciels de conception" },
+      { href: "/solutions/conception-chiffrage", label: "Conception & chiffrage", desc: "Du plan au devis chiffre" },
     ],
   };
 
