@@ -17,17 +17,17 @@ const guides = [
 const programmes = [
   {
     title: "Artisan solo",
-    desc: "Une prise en main individuelle d'une demi-journee en visio : votre premier vrai devis, votre catalogue, vos habitudes. Vous repartez operationnel.",
+    desc: "DEVIA s'apprend sur VOTRE premier vrai devis : une demi-journee en visio, votre catalogue renseigne, vos habitudes de chiffrage integrees. Vous terminez la session avec un devis pret a envoyer.",
     tag: "Demi-journee en visio",
   },
   {
     title: "Entreprise",
-    desc: "Formation de votre equipe sur site ou a distance, integration de votre catalogue et de vos regles metier. Inclus dans la formule personnalisee.",
+    desc: "DEVIA se deploie dans votre equipe : formation sur site ou a distance, catalogue et regles metier integres a l'installation. Chacun repart autonome sur ses propres projets. Inclus dans la formule personnalisee.",
     tag: "Sur site ou a distance",
   },
   {
     title: "Lycees & formation",
-    desc: "DEVIA comme support pedagogique pour les sections bois : les eleves decrivent, le logiciel calcule, le tableau Eurocode explique. Programme en construction avec des enseignants.",
+    desc: "DEVIA entre en atelier : les eleves decrivent l'ouvrage, le logiciel genere la structure, et le tableau Eurocode 5 explique chaque section. Un support pedagogique construit avec des enseignants de la filiere bois.",
     tag: "En construction",
   },
 ];
