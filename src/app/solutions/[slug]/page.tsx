@@ -5,11 +5,11 @@ const solutions = [
   {
     slug: "charpente-traditionnelle", eyebrow: "Charpente traditionnelle",
     title: "La charpente traditionnelle, calculee au millimetre",
-    intro: "Fermes completes, pannes d'aplomb sur echantignoles, coupes d'onglet au faitage : DEVIA modelise la charpente traditionnelle avec le niveau de detail d'un atelier.",
-    points: ["Fermes completes : entraits, arbaletriers, poincons, contrefiches", "Pannes d'aplomb calees sur echantignoles", "Coupes d'onglet au faitage, liens de faitage", "Sections mini et conseillees selon Eurocode 5", "Table regionale montagne integree au calcul"],
-    d1: "Chaque ferme est generee avec ses pieces reelles et leurs assemblages types. Les pannes se posent d'aplomb sur leurs echantignoles, les chevrons se calepinent par travee, et la couverture choisie pese sur la structure dans la descente de charge.",
-    d2: "En montagne, DEVIA connait les habitudes locales : si l'altitude l'exige, la section conseillee bascule sur la table regionale, testee et validee par le calcul. Le devis, la 3D et le tableau de verification racontent la meme chose.",
-    etapes: [{ t: "Decrivez", d: "Dimensions, pente, commune : quelques mots suffisent." }, { t: "Verifiez", d: "La 3D et les sections calculees s'affichent immediatement." }, { t: "Envoyez", d: "Le devis PDF part chez votre client avec ses vues 3D." }],
+    intro: "Fermes completes a entraxe regulier, pannes d'aplomb calees sur echantignoles, chevrons calepines a 60 cm : DEVIA genere la charpente traditionnelle comme on la trace en atelier, et la dimensionne selon l'Eurocode 5.",
+    points: ["Fermes completes : entrait, arbaletriers, poincon, contrefiches et liens de faitage", "Pannes d'aplomb sur echantignoles prismatiques, coupes d'onglet au faitage", "Chevrons calepines par travee, entraxe maxi 60 cm", "Chaque piece verifiee : flexion, fleche, compression et flambement", "En montagne, sections d'usage regional (ex. pannes 120x240) testees en priorite"],
+    d1: "La structure est generee piece par piece avec ses regles de metier : les fermes se posent a entraxe regulier, les pannes s'appuient d'aplomb sur leurs echantignoles taillees a la largeur de l'arbaletrier, les chevrons se repartissent par travee. Le resultat se lit comme un plan d'execution, pas comme un dessin d'illustration.",
+    d2: "Cote calcul, chaque type de piece recoit sa verification Eurocode 5 : flexion et fleche pour pannes et chevrons, compression et flambement pour poincons et contrefiches, avec les charges de neige et de vent de la commune, altitude comprise. Et en zone de montagne, les sections d'usage regional passent en tete des qu'elles tiennent le calcul. Devis, 3D et tableau racontent la meme chose : le moteur est unique.",
+    etapes: [{ t: "Decrivez", d: "Type, dimensions, pente, commune - ou collez le mail du client." }, { t: "Verifiez", d: "3D complete et tableau Eurocode 5 en quelques secondes." }, { t: "Envoyez", d: "Devis PDF avec vues 3D, nomenclature et prix." }],
     c: "#f59e0b", txt: "#b45309", tint: "#fffbeb",
   },
   {
