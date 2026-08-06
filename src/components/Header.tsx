@@ -35,9 +35,9 @@ export default function Header() {
   };
 
   const apprentissageMenu = [
-    { href: "/apprentissage#formation-devia", label: "Formation DEVIA", desc: "Prendre en main le logiciel pas a pas" },
-    { href: "/apprentissage#nos-programmes", label: "Nos programmes", desc: "Parcours guides selon votre profil" },
-    { href: "/apprentissage#aide", label: "Aide", desc: "Questions frequentes et support" },
+    { href: "/apprentissage/formation-devia", label: "Formation DEVIA", desc: "Prendre en main le logiciel pas a pas" },
+    { href: "/apprentissage/programmes", label: "Nos programmes", desc: "Parcours guides selon votre profil" },
+    { href: "/apprentissage/aide", label: "Aide", desc: "Questions frequentes et support" },
   ];
 
   return (
