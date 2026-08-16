@@ -7,6 +7,7 @@ const features = [
     desc: "DEVIA peut creer un devis complet a partir d'une description simple pour les structures classiques. Elle peut analyser et utiliser des plans d'architecte pour des projets plus ambitieux. DEVIA comprend le langage naturel, analyse le type d'ouvrage, les dimensions et la commune, puis structure un devis complet.",
     bullets: ["Pre-remplit les infos depuis un plan PDF ou une photo", "Reflechit et cree en quelques secondes", "Detecte automatiquement le type d'ouvrage"],
     c: "#f59e0b", tint: "#fffbeb", txt: "#b45309",
+    image: "/captures/formulaire-devis.jpg",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z" /></svg>,
   },
   {
@@ -15,6 +16,7 @@ const features = [
     desc: "Chaque devis s'accompagne d'un modele 3D complet : sections calculees pour chaque piece, assemblages pre-definis et export IFC. Manipulez, zoomez, tournez autour de la structure. Vos clients comprennent enfin ce qu'ils achetent.",
     bullets: ["Modele 3D genere automatiquement", "Toutes les pieces detaillees et cotees", "Export IFC vers vos autres logiciels"],
     c: "#3b82f6", tint: "#eff6ff", txt: "#1d4ed8",
+    image: "/captures/vue-3d-noues.png",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 00-1-1.7l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.7l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" /><path d="M3.3 7L12 12l8.7-5M12 22V12" /></svg>,
   },
   {
@@ -102,10 +104,16 @@ export default function FeaturesPage() {
                   </ul>
                 </div>
                 <div className={reversed ? "md:order-1" : ""}>
-                  <div className="rounded-3xl border border-slate-200 aspect-[4/3] flex flex-col items-center justify-center gap-4" style={{ background: f.tint }}>
-                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-white" style={{ background: f.c }}>{f.icon}</div>
-                    <div className="text-xs font-semibold tracking-wide" style={{ color: f.txt }}>Capture a venir</div>
-                  </div>
+                  {(f as any).image ? (
+                    <div className="rounded-3xl border border-slate-200 overflow-hidden shadow-xl">
+                      <img src={(f as any).image} alt={f.title} className="w-full h-auto" />
+                    </div>
+                  ) : (
+                    <div className="rounded-3xl border border-slate-200 aspect-[4/3] flex flex-col items-center justify-center gap-4" style={{ background: f.tint }}>
+                      <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-white" style={{ background: f.c }}>{f.icon}</div>
+                      <div className="text-xs font-semibold tracking-wide" style={{ color: f.txt }}>Capture a venir</div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
