@@ -25,6 +25,7 @@ const features = [
     desc: "DEVIA dimensionne chaque piece selon l'Eurocode 5 : section mini (calcul strict) et section conseillee (usage metier et regional de montagne). Neige et vent recuperes selon la commune. Des devis solides, defendables.",
     bullets: ["Sections mini et conseillees pour chaque piece", "Charges neige et vent par commune", "Verification en flexion et au flambement"],
     c: "#8b5cf6", tint: "#f5f3ff", txt: "#6d28d9",
+    image: "/captures/eurocode-calculs.jpeg",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v18M7 21h10M6 7l6-1 6 1" /><path d="M6 7l-3 6a3.5 3.5 0 006 0z" /><path d="M18 7l-3 6a3.5 3.5 0 006 0z" /></svg>,
   },
   {
@@ -41,6 +42,7 @@ const features = [
     desc: "Votre logo, vos coordonnees, le detail des postes avec leurs prix et les vues 3D de la charpente : DEVIA genere un devis PDF professionnel, chiffre et pret a envoyer. Et avec la formule personnalisee, le design du document s'adapte a l'image de votre entreprise.",
     bullets: ["Prix et postes detailles sur le document", "Vues 3D integrees au document", "Design personnalisable avec la formule personnalisee"],
     c: "#f43f5e", tint: "#fff1f2", txt: "#be123c",
+    image: "/captures/export-pdf.jpeg",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><path d="M14 2v6h6M9 15h6M9 11h2" /></svg>,
   },
   {
@@ -49,6 +51,7 @@ const features = [
     desc: "Renseignez vos prix et vos materiaux une seule fois. DEVIA les applique automatiquement a tous vos devis, et complete au besoin avec les prix du marche. Vos tarifs restent les votres.",
     bullets: ["Vos prix appliques a tous vos devis", "Complement marche optionnel", "Catalogue de materiaux personnalise"],
     c: "#14b8a6", tint: "#f0fdfa", txt: "#0f766e",
+    image: "/captures/catalogue.jpeg",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2zM22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" /></svg>,
   },
   {
@@ -57,6 +60,7 @@ const features = [
     desc: "Gerez l'ensemble de vos projets depuis une interface unique : historique, groupes, recherche instantanee. Retrouvez n'importe quel devis en un instant, meme des mois plus tard.",
     bullets: ["Tous vos projets au meme endroit", "Groupes et recherche instantanee", "Historique complet de vos devis"],
     c: "#6366f1", tint: "#eef2ff", txt: "#4338ca",
+    image: "/captures/multi-projets.jpeg",
     icon: <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>,
   },
 ];
