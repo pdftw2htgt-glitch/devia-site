@@ -82,25 +82,25 @@ export default function PricingPage() {
         <div className="max-w-3xl mx-auto px-6 mt-24">
           <details className="group bg-white border border-slate-200 rounded-2xl shadow-sm">
             <summary className="flex items-center justify-between cursor-pointer select-none px-8 py-6 list-none [&::-webkit-details-marker]:hidden">
-              <span className="text-xl font-bold text-slate-900">Questions frequentes</span>
+              <span className="text-xl font-bold text-slate-900">Vos questions</span>
               <span className="w-9 h-9 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-2xl font-semibold leading-none transition-transform duration-200 group-open:rotate-45">+</span>
             </summary>
             <div className="space-y-6 px-8 pb-8 pt-4 border-t border-slate-100">
             <div>
               <h3 className="font-semibold text-slate-900 mb-2">L&apos;abonnement est-il obligatoire ?</h3>
-              <p className="text-slate-600">Non. Vous pouvez utiliser DEVIA a vie avec votre achat initial. L&apos;abonnement maintenance debloque uniquement les nouvelles versions et le support etendu.</p>
+              <p className="text-slate-600">Non. Vous pouvez utiliser DEVIA dans sa version actuelle des l'obtention du logiciel, sans limite de duree. L'abonnement maintenance debloque uniquement les nouvelles versions et le support etendu.</p>
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 mb-2">Comment recevoir ma cle de licence ?</h3>
-              <p className="text-slate-600">Apres paiement, vous recevez immediatement par email votre cle au format DEVIA-2026-XXXX-XXXX-XXXX. Connectez-vous a l&apos;application et activez-la en quelques secondes.</p>
+              <p className="text-slate-600">Apres paiement, vous recevez immediatement par e-mail votre cle d'acces au logiciel. Connectez-vous au logiciel et activez-la en quelques secondes.</p>
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 mb-2">Puis-je tester avant d&apos;acheter ?</h3>
-              <p className="text-slate-600">Une demo en ligne est disponible. Contactez-nous pour acceder a une demonstration personnalisee.</p>
+              <p className="text-slate-600">DEVIA ne propose pas de demo gratuite. Vous pouvez cependant explorer chaque fonctionnalite en detail sur le site officiel de DEVIA.</p>
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 mb-2">Combien d&apos;ordinateurs puis-je utiliser ?</h3>
-              <p className="text-slate-600">Une licence DEVIA est valable pour un utilisateur. Vous pouvez vous connecter depuis n&apos;importe quel ordinateur, mais pas simultanement.</p>
+              <p className="text-slate-600">En version standard, une cle de licence correspond a une entreprise et a un ordinateur. En formule personnalisee, une licence correspond toujours a un ordinateur, mais plusieurs licences peuvent etre rattachees au compte de la meme entreprise.</p>
             </div>
             </div>
           </details>
