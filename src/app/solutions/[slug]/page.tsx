@@ -25,8 +25,8 @@ const solutions = [
   {
     slug: "construction-bois", eyebrow: "Construction bois",
     title: "L'ossature bois, murs compris",
-    intro: "DEVIA construit vos murs a ossature bois et leur charpente dans le meme projet. Montants 45x145, baies avec montants doubles, linteaux et alleges, voile OSB : la structure complete, prete a presenter.",
-    points: ["MOB 45x145 : montants, lisses et entretoises generes", "Baies avec montants doubles, linteaux et alleges", "Voile travaillant OSB et planchers geres"],
+    intro: "DEVIA maitrise la construction bois : des murs a ossature bois aux caissons de toiture, jusqu'a la charpente de votre projet. Elle connait chaque piece et chaque regle d'or de la construction bois - la structure complete, prete a presenter.",
+    points: ["MOB : montants, lisse basse, lisse haute, lisse d'ancrage et lisse de chainage", "Baies avec montants doubles, linteaux et alleges", "Bardage exterieur, voile OSB et planchers"],
     d1: "Vous decrivez le batiment, DEVIA leve les murs : chaque baie recoit ses renforts automatiquement, et la charpente vient se poser sur l'ossature dans la meme scene 3D.",
     d2: "Le metre reunit murs et toiture dans une seule nomenclature chiffree : sections, longueurs, volumes et poids, prets pour le debit.",
     etapes: [{ t: "Decrivez", d: "Emprise, hauteur, niveaux, ouvertures." }, { t: "Verifiez", d: "Ossature et charpente s'assemblent en 3D." }, { t: "Envoyez", d: "Le devis couvre la structure complete." }],
