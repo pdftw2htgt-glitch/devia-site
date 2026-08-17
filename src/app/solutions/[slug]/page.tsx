@@ -65,8 +65,8 @@ const solutions = [
   {
     slug: "neuf-renovation", eyebrow: "Neuf & renovation",
     title: "Du projet neuf a la reprise d'existant",
-    intro: "DEVIA chiffre vos projets neufs de bout en bout, et prepare deja la renovation : elle lit les plans de l'existant et sait y accrocher des ouvrages neufs.",
-    points: ["Projets neufs chiffres de la description au devis", "Plans PDF et photos de l'existant importes", "Module reprise d'existant en developpement"],
+    intro: "DEVIA chiffre vos projets neufs de bout en bout, et vous accompagne en renovation : elle analyse les plans et les photos de l'existant pour preparer l'intervention sur votre structure.",
+    points: ["Projet neuf chiffre de la description au devis", "Renovation : analyse des plans PDF et photos de l'existant", "Module reprise d'existant en developpement"],
     d1: "Sur le neuf, tout y est : description ou plan en entree, 3D, verifications Eurocode 5 et devis chiffre en sortie.",
     d2: "Pour la renovation, l'import de plans et l'ancrage sur existant sont deja la. Le module complet de reprise d'existant est en developpement - suivez la page Actualite.",
     etapes: [{ t: "Importez", d: "Le plan de l'existant ou la description du neuf." }, { t: "Verifiez", d: "DEVIA pre-remplit et modelise." }, { t: "Envoyez", d: "Le devis part, neuf ou extension." }],
