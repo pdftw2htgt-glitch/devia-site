@@ -10,14 +10,14 @@ const rubriques = [
     href: "/apprentissage/formation-devia",
     tag: "6 guides",
     title: "Formation DEVIA",
-    desc: "Prenez le logiciel en main pas a pas : premier devis, import de plans, catalogue de prix, tableau Eurocode 5, exports PDF et IFC.",
+    desc: "Apprenez les bases de DEVIA et prenez le logiciel en main pas a pas : premier devis, import de plans, catalogue de prix, tableau Eurocode 5, exports PDF et IFC.",
     points: ["Votre premier devis en quelques secondes", "Lire les sections mini et conseillees", "Exporter en PDF et en IFC"],
   },
   {
     href: "/apprentissage/programmes",
     tag: "3 parcours",
     title: "Nos programmes",
-    desc: "Un accompagnement construit sur vos propres projets, selon votre profil. Vous terminez avec un devis pret a envoyer.",
+    desc: "Un accompagnement construit sur vos propres projets. Vous terminez avec un devis pret a envoyer.",
     points: ["Artisan solo : demi-journee en visio", "Entreprise : formation de l'equipe", "Lycees & formation : en construction"],
   },
   {
@@ -41,8 +41,9 @@ export default function ApprentissagePage() {
               <span className="text-amber-600">en quelques minutes.</span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed">
-              Pas de formation de trois jours. Des videos courtes en libre acces,
-              des programmes d'accompagnement, et des sessions en visio a la demande.
+              DEVIA a ete pensee pour etre simple a prendre en main : pas de formation
+              de trois jours, mais des videos courtes et des cours en ligne en libre acces,
+              des programmes d'accompagnement et des sessions en visio a la demande.
             </p>
           </div>
         </div>
