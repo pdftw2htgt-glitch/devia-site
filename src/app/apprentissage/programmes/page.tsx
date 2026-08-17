@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Nos programmes - Apprentissage DEVIA",
-  description: "Trois parcours d'accompagnement DEVIA : artisan solo, entreprise, lycees et formation. Vous terminez avec un devis pret a envoyer.",
+  description: "Des videos en libre acces, trois parcours d'accompagnement et des sessions en visio a la demande. Vous terminez avec un devis pret a envoyer.",
 };
 
 const programmes = [
@@ -36,6 +36,16 @@ const programmes = [
       { k: "Resultat", v: "Le tableau Eurocode 5 comme support de cours" },
     ],
   },
+  {
+    tag: "Quand vous voulez",
+    title: "Sessions a la demande",
+    desc: "Une question technique, un point de blocage, une nouvelle fonctionnalite a prendre en main : demandez une visio ou un cours d'apprentissage cible. Pas de programme impose - vous decrivez le besoin, on planifie la session.",
+    details: [
+      { k: "Public", v: "Tout utilisateur DEVIA" },
+      { k: "Format", v: "Visio courte ou cours cible, sur demande" },
+      { k: "Resultat", v: "Votre blocage leve, sur votre propre projet" },
+    ],
+  },
 ];
 
 export default function ProgrammesPage() {
@@ -49,7 +59,8 @@ export default function ProgrammesPage() {
             <p className="text-xl text-slate-600 leading-relaxed">
               Pas de formation theorique de trois jours. Chaque programme se construit sur
               vos propres projets, votre catalogue et vos habitudes de chiffrage, et se
-              termine sur un resultat concret.
+              termine sur un resultat concret. Et entre deux programmes, une visio ou un
+              cours se demande simplement depuis la page contact.
             </p>
           </div>
         </div>

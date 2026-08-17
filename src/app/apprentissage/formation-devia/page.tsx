@@ -63,7 +63,7 @@ export default function FormationDeviaPage() {
             ))}
           </div>
           <p className="text-center text-slate-500 mt-12">
-            Guides detailles et videos pas-a-pas : en developpement, bientot sur cette page.
+            Les videos pas-a-pas arrivent une a une sur cette page. Besoin d'aller plus vite ? Demandez une session en visio depuis la page contact.
           </p>
         </div>
       </section>

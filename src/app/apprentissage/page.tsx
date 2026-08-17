@@ -41,8 +41,8 @@ export default function ApprentissagePage() {
               <span className="text-amber-600">en quelques minutes.</span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed">
-              Pas de formation de trois jours. Des guides courts, des programmes
-              d'accompagnement, et une equipe qui repond.
+              Pas de formation de trois jours. Des videos courtes en libre acces,
+              des programmes d'accompagnement, et des sessions en visio a la demande.
             </p>
           </div>
         </div>
