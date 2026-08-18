@@ -16,9 +16,13 @@ const guides = [
   },
   {
     slug: "importer-un-plan", num: "02",
-    title: "Importer un plan PDF ou une photo",
-    intro: "Deposez le document : dimensions, pente, hauteur et commune sont extraites et pre-remplies. Verifiez, ajustez, generez.",
-    etapes: [],
+    title: "Un devis complet depuis un plan PDF ou une photo",
+    intro: "DEVIA possede trois modes de creation : le formulaire pour les devis simples, le multi-ouvrages pour les projets plus imposants sans complexite geometrique particuliere, et l'import de plans PDF ou de photos. Ce mode analyse les plans d'un ouvrage neuf, en extrait les donnees de fabrication, pre-remplit le formulaire et conserve la geometrie des structures. Un processus automatise, qui ne demande qu'une action de votre part.",
+    etapes: [
+      { t: "Ajoutez vos documents", d: "Dans le formulaire, cliquez sur le bouton d'ajout de fichiers et importez votre plan PDF ou votre photo." },
+      { t: "Lancez l'analyse", d: "DEVIA lit le dossier : dimensions, hauteurs, pente, commune et decomposition des volumes sont extraites et pre-remplies." },
+      { t: "Verifiez et generez", d: "Controlez la lecture proposee, ajustez si besoin, puis generez : le devis et la 3D reprennent la geometrie du plan." },
+    ],
   },
   {
     slug: "multi-ouvrages", num: "03",
