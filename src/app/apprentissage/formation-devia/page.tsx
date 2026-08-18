@@ -12,12 +12,12 @@ const points = [
 ];
 
 const guides = [
-  { num: "01", title: "Votre premier devis en quelques secondes", description: "Decrivez le projet en langage naturel, ou collez le mail de votre client. DEVIA detecte le type de structure, genere le devis et la 3D." },
-  { num: "02", title: "Importer un plan PDF ou une photo", description: "Deposez le document : dimensions, pente, hauteur et commune sont extraites et pre-remplies. Verifiez, ajustez, generez." },
-  { num: "03", title: "Creer un projet multi-ouvrages", description: "Ajoutez plusieurs structures a un meme projet : maison, balcon, appentis. DEVIA les calcule une par une et les assemble en 3D." },
-  { num: "04", title: "Renseigner votre catalogue de prix", description: "Importez vos prix d'entreprise : DEVIA les applique en priorite a tous vos devis, et peut completer avec les prix du marche." },
-  { num: "05", title: "Lire le tableau Calcul", description: "Sections mini (calcul strict) et sections conseillees (usage metier et regional) : comprenez ce que DEVIA verifie selon Eurocode 5." },
-  { num: "06", title: "Exporter en PDF et IFC", description: "Le devis final avec vues 3D pour votre client, et l'export IFC pour vos autres logiciels de conception." },
+  { slug: "devis-standard", num: "01", title: "Votre premier devis en quelques secondes", description: "Decrivez le projet en langage naturel, ou collez le mail de votre client. DEVIA detecte le type de structure, genere le devis et la 3D." },
+  { slug: "importer-un-plan", num: "02", title: "Importer un plan PDF ou une photo", description: "Deposez le document : dimensions, pente, hauteur et commune sont extraites et pre-remplies. Verifiez, ajustez, generez." },
+  { slug: "multi-ouvrages", num: "03", title: "Creer un projet multi-ouvrages", description: "Ajoutez plusieurs structures a un meme projet : maison, balcon, appentis. DEVIA les calcule une par une et les assemble en 3D." },
+  { slug: "catalogue-de-prix", num: "04", title: "Renseigner votre catalogue de prix", description: "Importez vos prix d'entreprise : DEVIA les applique en priorite a tous vos devis, et peut completer avec les prix du marche." },
+  { slug: "tableau-calcul", num: "05", title: "Lire le tableau Calcul", description: "Sections mini (calcul strict) et sections conseillees (usage metier et regional) : comprenez ce que DEVIA verifie selon Eurocode 5." },
+  { slug: "export-pdf-ifc", num: "06", title: "Exporter en PDF et IFC", description: "Le devis final avec vues 3D pour votre client, et l'export IFC pour vos autres logiciels de conception." },
 ];
 
 export default function FormationDeviaPage() {
@@ -55,11 +55,12 @@ export default function FormationDeviaPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {guides.map((g) => (
-              <div key={g.num} className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
+              <Link key={g.num} href={"/apprentissage/formation-devia/" + g.slug} className="block bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
                 <div className="text-amber-600 font-bold text-sm mb-3">{g.num}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{g.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{g.description}</p>
-              </div>
+                <p className="text-amber-600 font-semibold text-sm mt-4">Lire le guide →</p>
+              </Link>
             ))}
           </div>
           <p className="text-center text-slate-500 mt-12">
