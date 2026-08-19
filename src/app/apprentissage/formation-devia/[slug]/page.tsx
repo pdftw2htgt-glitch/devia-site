@@ -56,9 +56,13 @@ const guides = [
   },
   {
     slug: "export-pdf-ifc", num: "06",
-    title: "Exporter en PDF et IFC",
-    intro: "Le devis final avec vues 3D pour votre client, et l'export IFC pour vos autres logiciels de conception.",
-    etapes: [],
+    title: "Donnez du sens a votre travail",
+    intro: "La force de DEVIA est de vous accompagner de A a Z dans votre projet. Une fois le devis termine, exportez le PDF pour le presenter au client. S'il donne suite au chantier, DEVIA exporte la structure 3D vers vos logiciels de conception habituels grace a l'export IFC - pour continuer vos travaux la ou DEVIA s'arrete.",
+    etapes: [
+      { t: "Exportez le devis PDF", d: "Logo, coordonnees, postes chiffres et vues 3D : le document est pret a etre presente au client." },
+      { t: "Le client valide", d: "Le devis devient chantier : la structure calculee dans DEVIA sert de base a la suite des travaux." },
+      { t: "Exportez en IFC", d: "Bouton Exporter IFC sur la vue 3D : chaque piece part avec sa position, son orientation et sa section vers vos logiciels de conception." },
+    ],
   },
 ];
 
