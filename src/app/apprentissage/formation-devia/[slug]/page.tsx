@@ -26,9 +26,13 @@ const guides = [
   },
   {
     slug: "multi-ouvrages", num: "03",
-    title: "Creer un projet multi-ouvrages",
-    intro: "Ajoutez plusieurs structures a un meme projet : maison, balcon, appentis. DEVIA les calcule une par une et les assemble en 3D.",
-    etapes: [],
+    title: "Multiplier les ouvrages dans un seul devis",
+    intro: "Le mode standard du formulaire cree un seul ouvrage. En choisissant Structure personnalisee dans le champ Type de structure, vous accumulez plusieurs ouvrages sur un meme rendu 3D et un meme devis : l'intelligence de DEVIA analyse et choisit l'emplacement et l'organisation de chaque ouvrage ajoute autour de l'ouvrage de base, dans le respect des regles de construction.",
+    etapes: [
+      { t: "Choisissez Structure personnalisee", d: "Dans le formulaire, champ Type de structure : selectionnez Structure personnalisee pour passer en mode multi-ouvrages." },
+      { t: "Accumulez les ouvrages", d: "Decrivez l'ouvrage de base puis ajoutez les suivants - maison, garage, sas, balcon - chacun avec ses dimensions." },
+      { t: "Laissez DEVIA assembler", d: "Chaque ouvrage est calcule pour lui-meme, puis positionne et organise autour de l'ouvrage de base. Un seul rendu 3D, un seul devis." },
+    ],
   },
   {
     slug: "catalogue-de-prix", num: "04",
