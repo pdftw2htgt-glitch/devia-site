@@ -36,9 +36,13 @@ const guides = [
   },
   {
     slug: "catalogue-de-prix", num: "04",
-    title: "Renseigner votre catalogue de prix",
-    intro: "Importez vos prix d'entreprise : DEVIA les applique en priorite a tous vos devis, et peut completer avec les prix du marche.",
-    etapes: [],
+    title: "Apportez votre propre catalogue a vos projets",
+    intro: "DEVIA possede nativement un catalogue de prix base sur une moyenne du marche, actualise regulierement : vos projets sont chiffres sur les prix du marche DEVIA. En apportant vos materiaux et leurs prix, ce sont eux qui s'appliquent a vos projets - et le marche DEVIA complete pour les materiaux manquants de votre catalogue.",
+    etapes: [
+      { t: "Remplissez votre catalogue", d: "Page Catalogue : ajoutez vos materiaux avec leur designation, leur unite et votre prix." },
+      { t: "Choisissez le catalogue du devis", d: "Au moment de generer, selectionnez Mon catalogue : vos prix s'appliquent en priorite au chiffrage." },
+      { t: "Completez avec le marche", d: "Pour les materiaux absents de votre catalogue, DEVIA complete automatiquement avec les prix du marche." },
+    ],
   },
   {
     slug: "tableau-calcul", num: "05",
