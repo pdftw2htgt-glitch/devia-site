@@ -46,9 +46,13 @@ const guides = [
   },
   {
     slug: "tableau-calcul", num: "05",
-    title: "Lire le tableau Calcul",
-    intro: "Sections mini (calcul strict) et sections conseillees (usage metier et regional) : comprenez ce que DEVIA verifie selon Eurocode 5.",
-    etapes: [],
+    title: "Sections mini ou conseillees",
+    intro: "DEVIA propose aux professionnels - charpentiers comme bureaux d'etudes - deux types de sections calculees selon l'Eurocode 5. Les sections MINI sont les sections minimum requises pour qu'un element tienne l'ouvrage : le resultat strict du calcul. Les sections CONSEILLEES repondent a l'usage metier et aux attentes esthetiques de la region.",
+    etapes: [
+      { t: "Ouvrez l'onglet Calcul", d: "Apres la generation, l'onglet Calcul affiche charges permanentes, neige, vent et verifications Eurocode 5 selon votre commune." },
+      { t: "Lisez la section mini", d: "La section minimum requise par le calcul pour chaque element de l'ouvrage." },
+      { t: "Comparez avec la conseillee", d: "La section d'usage metier et regional, affichee par defaut - un bouton permet de basculer entre mini et conseillee sur la vue 3D." },
+    ],
   },
   {
     slug: "export-pdf-ifc", num: "06",
