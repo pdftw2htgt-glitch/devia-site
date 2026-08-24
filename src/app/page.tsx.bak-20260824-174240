@@ -30,12 +30,12 @@ export default function HomePage() {
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.05] mb-6">
               Vos devis charpente,
               <br />
-              <span className="text-amber-400">automatisés par l&apos;IA.</span>
+              <span className="text-amber-400">automatises par l&apos;IA.</span>
             </h1>
 
             <p className="text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl">
               Un mail de client, quelques clics : DEVIA vous rend un devis chiffre
-              avec sa charpente en 3D, prêt à envoyer.
+              avec sa charpente en 3D, pret a envoyer.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -49,12 +49,12 @@ export default function HomePage() {
                 href="/fonctionnalites"
                 className="inline-flex items-center justify-center border border-slate-600 text-slate-200 px-8 py-4 rounded-lg text-base font-semibold hover:bg-slate-800 hover:border-slate-500 transition-colors backdrop-blur-sm"
               >
-                Découvrir les fonctionnalités
+                Decouvrir les fonctionnalites
               </Link>
             </div>
 
             <p className="text-sm text-slate-400 mt-6">
-              Achat de la version actuelle. Mises à jour optionnelles.
+              Achat de la version actuelle. Mises a jour optionnelles.
             </p>
           </div>
         </div>
@@ -64,8 +64,8 @@ export default function HomePage() {
       <section className="py-24 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">Conçu pour les professionnels exigeants</h2>
-            <p className="text-lg text-slate-600">Trois piliers fondamentaux : fiabilité, confidentialité, efficacité.</p>
+            <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">Concu pour les professionnels exigeants</h2>
+            <p className="text-lg text-slate-600">Trois piliers fondamentaux : fiabilite, confidentialite, efficacite.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-[0_12px_32px_rgba(245,158,11,0.12)]">
@@ -75,8 +75,8 @@ export default function HomePage() {
                   <path d="M9 12l2 2 4-4"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Fiabilité</h3>
-              <p className="text-slate-600 leading-relaxed">Calculs structurels basés sur les normes Eurocode 5. Vos devis sont solides, défendables, professionnels.</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Fiabilite</h3>
+              <p className="text-slate-600 leading-relaxed">Calculs structurels bases sur les normes Eurocode 5. Vos devis sont solides, defendables, professionnels.</p>
               <div className="mt-5 pt-4 border-t border-dashed border-slate-200 text-xs text-slate-500 font-mono">Eurocode 5 &middot; sections <span className="text-amber-700 font-semibold">mini / conseillees</span> &middot; neige et vent par commune</div>
             </div>
             <div className="bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-[0_12px_32px_rgba(245,158,11,0.12)]">
@@ -86,9 +86,9 @@ export default function HomePage() {
                   <path d="M7 11V7a5 5 0 0110 0v4"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Confidentialité</h3>
-              <p className="text-slate-600 leading-relaxed">Vos projets restent confidentiels. Aucun de vos devis n&apos;est partagé ou utilisé pour entraîner des IA tierces.</p>
-              <div className="mt-5 pt-4 border-t border-dashed border-slate-200 text-xs text-slate-500 font-mono">Vos prix restent <span className="text-amber-700 font-semibold">chez vous</span> &middot; aucun entraînement d&apos;IA tierce</div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Confidentialite</h3>
+              <p className="text-slate-600 leading-relaxed">Vos projets restent confidentiels. Aucun de vos devis n&apos;est partage ou utilise pour entrainer des IA tierces.</p>
+              <div className="mt-5 pt-4 border-t border-dashed border-slate-200 text-xs text-slate-500 font-mono">Vos prix restent <span className="text-amber-700 font-semibold">chez vous</span> &middot; aucun entrainement d&apos;IA tierce</div>
             </div>
             <div className="bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-[0_12px_32px_rgba(245,158,11,0.12)]">
               <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center mb-5 text-white shadow-lg shadow-amber-600/25">
@@ -98,7 +98,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Gain de temps</h3>
-              <p className="text-slate-600 leading-relaxed">Réduisez à quelques minutes ce qui prenait 4 heures. Concentrez-vous sur vos vrais chantiers.</p>
+              <p className="text-slate-600 leading-relaxed">Reduisez a quelques minutes ce qui prenait 4 heures. Concentrez-vous sur vos vrais chantiers.</p>
               <div className="mt-5 pt-4 border-t border-dashed border-slate-200 text-xs text-slate-500 font-mono"><span className="text-amber-700 font-semibold">4 heures &rarr; quelques minutes</span> &middot; devis + 3D + calculs</div>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function HomePage() {
           <div className="text-lg text-slate-300 leading-relaxed space-y-6 max-w-3xl mx-auto">
             <p>
               Chaque devis charpente prend en moyenne <strong className="text-amber-400">4 heures</strong> de votre temps
-              &mdash; un temps non facturé, souvent perdu pour des clients qui ne donneront jamais suite.
+              &mdash; un temps non facture, souvent perdu pour des clients qui ne donneront jamais suite.
             </p>
             <p>
               DEVIA est concu pour automatiser ces petits devis a faible valeur,
@@ -144,23 +144,23 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">
-              Les spécificités de DEVIA
+              Les specificites de DEVIA
             </h2>
             <p className="text-lg text-slate-600">
-              Ce qui fait la différence au quotidien, au-delà des fonctionnalités.
+              Ce qui fait la difference au quotidien, au-dela des fonctionnalites.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Innovation et croissance</h3>
               <p className="text-slate-600 leading-relaxed">
-                DEVIA évolue au rythme des technologies d&apos;intelligence artificielle.
+                DEVIA evolue au rythme des technologies d&apos;intelligence artificielle.
                 Chaque avancee majeure de l&apos;IA est integree au logiciel, avec des
                 mises a jour plusieurs fois par an.
               </p>
             </div>
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Support à l&apos;écoute</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Support a l&apos;ecoute</h3>
               <p className="text-slate-600 leading-relaxed">
                 Une question, un blocage, une idee : notre equipe repond rapidement,
                 et chaque retour d&apos;artisan influence directement le developpement
@@ -168,7 +168,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Suivi privilégié et sur mesure</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Suivi privilegie et sur mesure</h3>
               <p className="text-slate-600 leading-relaxed">
                 Un interlocuteur qui connait votre entreprise, votre catalogue et vos
                 habitudes de chiffrage. Un suivi de proximite, pas un ticket anonyme.
@@ -180,7 +180,7 @@ export default function HomePage() {
                 Avec la formule personnalisee, DEVIA s&apos;adapte a votre entreprise :
                 options choisies ensemble, catalogue integre, formation de votre equipe.{" "}
                 <Link href="/tarifs" className="text-amber-600 font-semibold hover:text-amber-700">
-                  Découvrir la formule personnalisée
+                  Decouvrir la formule personnalisee
                 </Link>
               </p>
             </div>
@@ -192,7 +192,7 @@ export default function HomePage() {
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold tracking-tight text-slate-900 mb-6">
-            Prêt à moderniser vos devis ?
+            Pret a moderniser vos devis ?
           </h2>
           <p className="text-xl text-slate-600 mb-10">
             Rejoignez les professionnels qui ont choisi d&apos;automatiser leurs devis.
