@@ -119,7 +119,7 @@ export default function HomePage() {
 
           <div className="text-lg text-slate-300 leading-relaxed space-y-6 max-w-3xl mx-auto">
             <p>
-              Chaque devis charpente prend en moyenne <strong className="text-amber-400">4 heures</strong>{" "}de votre temps
+              Chaque devis charpente prend en moyenne <strong className="text-amber-400">4 heures</strong> de votre temps
               &mdash; un temps non facturé, souvent perdu pour des clients qui ne donneront jamais suite.
             </p>
             <p>
