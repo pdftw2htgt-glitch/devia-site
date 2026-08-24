@@ -99,7 +99,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Gain de temps</h3>
               <p className="text-slate-600 leading-relaxed">Reduisez a quelques minutes ce qui prenait 4 heures. Concentrez-vous sur vos vrais chantiers.</p>
-              <div className="mt-5 pt-4 border-t border-dashed border-slate-200 text-xs text-slate-500 font-mono"><span className="text-amber-700 font-semibold">4 heures &rarr; quelques secondes</span> &middot; devis + 3D + calculs</div>
+              <div className="mt-5 pt-4 border-t border-dashed border-slate-200 text-xs text-slate-500 font-mono"><span className="text-amber-700 font-semibold">4 heures &rarr; quelques minutes</span> &middot; devis + 3D + calculs</div>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@ export default function HomePage() {
               <p className="text-slate-600 leading-relaxed">
                 DEVIA evolue au rythme des technologies d&apos;intelligence artificielle.
                 Chaque avancee majeure de l&apos;IA est integree au logiciel, avec des
-                mises a jour chaque semaine.
+                mises a jour plusieurs fois par an.
               </p>
             </div>
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
