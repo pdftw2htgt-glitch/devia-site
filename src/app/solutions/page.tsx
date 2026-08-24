@@ -23,8 +23,8 @@ const solutions = [
   {
     id: "construction-bois", eyebrow: "Construction bois",
     title: "L'ossature bois, murs compris",
-    desc: "DEVIA leve vos murs a ossature bois et pose la charpente dessus, dans la meme scene 3D.",
-    bullets: ["MOB 45x145 avec baies renforcees", "Voile OSB et planchers geres", "Nomenclature murs + toiture"],
+    desc: "DEVIA maitrise la construction bois : murs a ossature, caissons de toiture, charpente - chaque piece, chaque regle d'or.",
+    bullets: ["MOB : montants, lisses basse, haute, d'ancrage et de chainage", "Baies avec montants doubles, linteaux et alleges", "Bardage exterieur, voile OSB et planchers"],
     c: "#8b5cf6", txt: "#6d28d9",
   },
   {

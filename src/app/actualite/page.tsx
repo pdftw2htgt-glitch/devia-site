@@ -7,6 +7,31 @@ export const metadata = {
 
 const news = [
   {
+    date: "24 aout 2026",
+    title: "Un devis PDF digne d'un dossier d'etude",
+    description: "Perspective du projet et charges de calcul en en-tete, prix presentes par categorie avec le detail des pieces, vues 3D en pleine page a la suite du devis. Et les quantites des postes bois sont desormais imposees par le metre du moteur 3D.",
+  },
+  {
+    date: "24 aout 2026",
+    title: "Le stock fournisseur enregistre dans DEVIA",
+    description: "Pres d'une centaine de references structurelles (contrecolle, lamelle-colle, KVH, ossature, LVL) avec leurs longueurs commerciales. Une panne part d'une seule piece jusqu'a 13 m en contrecolle, et le devis cite la reference exacte.",
+  },
+  {
+    date: "16 aout 2026",
+    title: "Noues : la greffe de toiture comme sur le chantier",
+    description: "Une aile plus basse penetre le pan du corps principal : noues posees sur la charpente porteuse, faitiere prolongee dans le pan, empannons, couverture decoupee le long des noues. La regle metier, pas une approximation.",
+  },
+  {
+    date: "16 aout 2026",
+    title: "Depasses de toiture sur toute la chaine",
+    description: "Lus sur le plan par l'analyse, modifiables dans la decomposition manuelle, rendus en 3D : chevrons prolonges, queues de pannes, chevrons de rive. Le contour du plan de toitures n'est plus jamais confondu avec les murs.",
+  },
+  {
+    date: "13 aout 2026",
+    title: "Export IFC : l'assemblage reel, piece par piece",
+    description: "Le fichier IFC reprend l'assemblage complet du projet : chaque piece part avec sa position, son orientation et sa section exactes vers vos logiciels de conception.",
+  },
+  {
     date: "27 juillet 2026",
     title: "Verification au flambement generalisee",
     description: "Poincons, contrefiches et consoles de balcon sont desormais dimensionnes en compression avec verification du flambement selon Eurocode 5, sur la base des tables officielles.",
