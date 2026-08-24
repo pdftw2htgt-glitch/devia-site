@@ -23,55 +23,55 @@ export default function PricingPage() {
             <div className="text-sm font-semibold text-slate-500 mb-2">FORMULE STANDARD</div>
             <h2 className="text-2xl font-bold text-slate-900 mb-2">Installation sans option</h2>
             <div className="flex items-baseline gap-2 mb-2">
-              <span className="text-sm text-slate-500">à partir de</span>
+              <span className="text-sm text-slate-500">a partir de</span>
               <span className="text-5xl font-bold text-slate-900">3 500</span>
               <span className="text-2xl text-slate-600">&euro;</span>
             </div>
             <div className="text-slate-600 font-medium mb-6">puis maintenance 150 &euro; / mois</div>
             <p className="text-slate-600 mb-6">
-              DEVIA installé sur votre poste, prêt à produire vos devis.
-              La maintenance couvre les mises à jour et le support.
+              DEVIA installe sur votre poste, pret a produire vos devis.
+              La maintenance couvre les mises a jour et le support.
             </p>
             <ul className="space-y-3 mb-8">
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Accès complet à DEVIA</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Génération IA illimitée</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Acces complet a DEVIA</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Generation IA illimitee</li>
               <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Visualisation 3D</li>
               <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Calculs Eurocode 5</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Export PDF illimité</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Mises à jour et support inclus dans la maintenance</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Export PDF illimite</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Mises a jour et support inclus dans la maintenance</li>
             </ul>
             <button className="w-full bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors">
               Acheter DEVIA
             </button>
           </div>
 
-          {/* FORMULE PERSONNALISÉE */}
+          {/* FORMULE PERSONNALISEE */}
           <div className="bg-amber-50 border-2 border-amber-400 rounded-2xl p-8 shadow-sm relative">
             <div className="absolute -top-3 left-8 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">
               SUR MESURE
             </div>
-            <div className="text-sm font-semibold text-amber-700 mb-2">FORMULE PERSONNALISÉE</div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-2">Adaptée à votre entreprise</h2>
+            <div className="text-sm font-semibold text-amber-700 mb-2">FORMULE PERSONNALISEE</div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">Adaptee a votre entreprise</h2>
             <div className="flex items-baseline gap-2 mb-2">
-              <span className="text-sm text-slate-500">à partir de</span>
+              <span className="text-sm text-slate-500">a partir de</span>
               <span className="text-5xl font-bold text-slate-900">4 500</span>
               <span className="text-2xl text-slate-600">&euro;</span>
             </div>
             <div className="text-slate-600 font-medium mb-6">puis 300 &euro; / mois</div>
             <p className="text-slate-600 mb-6">
-              Une installation configurée pour vos besoins, définie ensemble
+              Une installation configuree pour vos besoins, definie ensemble
               lors d&apos;un entretien : options, catalogue, accompagnement.
             </p>
             <ul className="space-y-3 mb-8">
               <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Tout de la formule standard</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Options au choix selon votre activité</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Catalogue de prix intégré à l&apos;installation</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Formation de votre équipe</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Options au choix selon votre activite</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Catalogue de prix integre a l&apos;installation</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Formation de votre equipe</li>
               <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Support prioritaire</li>
-              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Évolutions spécifiques étudiées</li>
+              <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Evolutions specifiques etudiees</li>
             </ul>
             <Link href="/contact" className="block w-full text-center bg-amber-500 text-slate-900 py-3 rounded-lg font-semibold hover:bg-amber-400 transition-colors">
-              Réserver un entretien
+              Reserver un entretien
             </Link>
           </div>
         </div>
@@ -88,19 +88,19 @@ export default function PricingPage() {
             <div className="space-y-6 px-8 pb-8 pt-4 border-t border-slate-100">
             <div>
               <h3 className="font-semibold text-slate-900 mb-2">L&apos;abonnement est-il obligatoire ?</h3>
-              <p className="text-slate-600">Non. Vous pouvez utiliser DEVIA dans sa version actuelle dès l'obtention du logiciel, sans limite de durée. L'abonnement maintenance débloque uniquement les nouvelles versions et le support étendu.</p>
+              <p className="text-slate-600">Non. Vous pouvez utiliser DEVIA dans sa version actuelle des l'obtention du logiciel, sans limite de duree. L'abonnement maintenance debloque uniquement les nouvelles versions et le support etendu.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-slate-900 mb-2">Comment recevoir ma clé de licence ?</h3>
-              <p className="text-slate-600">Après paiement, vous recevez immédiatement par e-mail votre clé d'accès au logiciel. Connectez-vous au logiciel et activez-la en quelques secondes.</p>
+              <h3 className="font-semibold text-slate-900 mb-2">Comment recevoir ma cle de licence ?</h3>
+              <p className="text-slate-600">Apres paiement, vous recevez immediatement par e-mail votre cle d'acces au logiciel. Connectez-vous au logiciel et activez-la en quelques secondes.</p>
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 mb-2">Puis-je tester avant d&apos;acheter ?</h3>
-              <p className="text-slate-600">DEVIA ne propose pas de démo gratuite. Vous pouvez cependant explorer chaque fonctionnalité en détail sur le site officiel de DEVIA.</p>
+              <p className="text-slate-600">DEVIA ne propose pas de demo gratuite. Vous pouvez cependant explorer chaque fonctionnalite en detail sur le site officiel de DEVIA.</p>
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 mb-2">Combien d&apos;ordinateurs puis-je utiliser ?</h3>
-              <p className="text-slate-600">En version standard, une clé de licence correspond à une entreprise et à un ordinateur. En formule personnalisée, une licence correspond toujours à un ordinateur, mais plusieurs licences peuvent être rattachées au compte de la même entreprise.</p>
+              <p className="text-slate-600">En version standard, une cle de licence correspond a une entreprise et a un ordinateur. En formule personnalisee, une licence correspond toujours a un ordinateur, mais plusieurs licences peuvent etre rattachees au compte de la meme entreprise.</p>
             </div>
             </div>
           </details>
