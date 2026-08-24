@@ -10,22 +10,22 @@ const rubriques = [
     href: "/apprentissage/formation-devia",
     tag: "6 guides",
     title: "Formation DEVIA",
-    desc: "Apprenez les bases de DEVIA et prenez le logiciel en main pas à pas : premier devis, import de plans, catalogue de prix, tableau Eurocode 5, exports PDF et IFC.",
-    points: ["Votre premier devis en quelques secondes", "Lire les sections mini et conseillées", "Exporter en PDF et en IFC"],
+    desc: "Apprenez les bases de DEVIA et prenez le logiciel en main pas a pas : premier devis, import de plans, catalogue de prix, tableau Eurocode 5, exports PDF et IFC.",
+    points: ["Votre premier devis en quelques secondes", "Lire les sections mini et conseillees", "Exporter en PDF et en IFC"],
   },
   {
     href: "/apprentissage/programmes",
     tag: "3 parcours",
     title: "Nos programmes",
-    desc: "Un accompagnement construit sur vos propres projets. Vous terminez avec un devis prêt à envoyer.",
-    points: ["Artisan solo : demi-journée en visio", "Entreprise : formation de l'équipe", "Lycées & formation : en construction"],
+    desc: "Un accompagnement construit sur vos propres projets. Vous terminez avec un devis pret a envoyer.",
+    points: ["Artisan solo : demi-journee en visio", "Entreprise : formation de l'equipe", "Lycees & formation : en construction"],
   },
   {
     href: "/apprentissage/aide",
     tag: "Support",
     title: "Aide",
-    desc: "Le support par email est inclus : 30 jours avec la formule standard, prioritaire et illimité avec la maintenance.",
-    points: ["Support par email inclus", "Prioritaire avec la maintenance", "Vos retours améliorent DEVIA"],
+    desc: "Le support par email est inclus : 30 jours avec la formule standard, prioritaire et illimite avec la maintenance.",
+    points: ["Support par email inclus", "Prioritaire avec la maintenance", "Vos retours ameliorent DEVIA"],
   },
 ];
 
@@ -36,14 +36,14 @@ export default function ApprentissagePage() {
         <div className="max-w-7xl mx-auto px-6 py-24">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold tracking-tight text-slate-900 mb-6">
-              Maîtrisez DEVIA
+              Maitrisez DEVIA
               <br />
               <span className="text-amber-600">en quelques minutes.</span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed">
-              DEVIA a été pensée pour être simple à prendre en main : pas de formation
-              de trois jours, mais des vidéos courtes et des cours en ligne en libre accès,
-              des programmes d'accompagnement et des sessions en visio à la demande.
+              DEVIA a ete pensee pour etre simple a prendre en main : pas de formation
+              de trois jours, mais des videos courtes et des cours en ligne en libre acces,
+              des programmes d'accompagnement et des sessions en visio a la demande.
             </p>
           </div>
         </div>

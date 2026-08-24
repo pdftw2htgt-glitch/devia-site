@@ -4,64 +4,64 @@ import { notFound } from "next/navigation";
 const guides = [
   {
     slug: "devis-standard", num: "01",
-    title: "La creation de devis standard",
-    intro: "Pour tout devis sans difficulte geometrique ni complexite particuliere de charpente, DEVIA propose un formulaire de creation simple et intuitif : vous decrivez, DEVIA genere.",
+    title: "La création de devis standard",
+    intro: "Pour tout devis sans difficulté géométrique ni complexité particulière de charpente, DEVIA propose un formulaire de création simple et intuitif : vous décrivez, DEVIA génère.",
     etapes: [
-      { t: "Nommez votre projet", d: "Donnez un nom a votre projet et associez-le a un groupe pour le retrouver facilement." },
-      { t: "Decrivez votre ouvrage", d: "Type de structure, dimensions, pente : decrivez votre projet et les details que vous voulez lui donner." },
-      { t: "Choisissez l'esthetique", d: "Couverture, essence du bois, finition : l'apparence que vous souhaitez pour l'ouvrage." },
-      { t: "Renseignez la localisation", d: "Indiquez la commune : vent, neige, seisme et altitude s'actualisent tout seuls." },
-      { t: "Generez votre devis", d: "Choisissez le marche de materiaux a utiliser - le votre ou celui de DEVIA - et lancez la generation." },
+      { t: "Nommez votre projet", d: "Donnez un nom à votre projet et associez-le à un groupe pour le retrouver facilement." },
+      { t: "Décrivez votre ouvrage", d: "Type de structure, dimensions, pente : décrivez votre projet et les détails que vous voulez lui donner." },
+      { t: "Choisissez l'esthétique", d: "Couverture, essence du bois, finition : l'apparence que vous souhaitez pour l'ouvrage." },
+      { t: "Renseignez la localisation", d: "Indiquez la commune : vent, neige, séisme et altitude s'actualisent tout seuls." },
+      { t: "Générez votre devis", d: "Choisissez le marché de matériaux à utiliser - le vôtre ou celui de DEVIA - et lancez la génération." },
     ],
   },
   {
     slug: "importer-un-plan", num: "02",
     title: "Un devis complet depuis un plan PDF ou une photo",
-    intro: "DEVIA possede trois modes de creation : le formulaire pour les devis simples, le multi-ouvrages pour les projets plus imposants sans complexite geometrique particuliere, et l'import de plans PDF ou de photos. Ce mode analyse les plans d'un ouvrage neuf, en extrait les donnees de fabrication, pre-remplit le formulaire et conserve la geometrie des structures. Un processus automatise, qui ne demande qu'une action de votre part.",
+    intro: "DEVIA possède trois modes de création : le formulaire pour les devis simples, le multi-ouvrages pour les projets plus imposants sans complexité géométrique particulière, et l'import de plans PDF ou de photos. Ce mode analyse les plans d'un ouvrage neuf, en extrait les données de fabrication, pré-remplit le formulaire et conserve la géométrie des structures. Un processus automatisé, qui ne demande qu'une action de votre part.",
     etapes: [
       { t: "Ajoutez vos documents", d: "Dans le formulaire, cliquez sur le bouton d'ajout de fichiers et importez votre plan PDF ou votre photo." },
-      { t: "Lancez l'analyse", d: "DEVIA lit le dossier : dimensions, hauteurs, pente, commune et decomposition des volumes sont extraites et pre-remplies." },
-      { t: "Verifiez et generez", d: "Controlez la lecture proposee, ajustez si besoin, puis generez : le devis et la 3D reprennent la geometrie du plan." },
+      { t: "Lancez l'analyse", d: "DEVIA lit le dossier : dimensions, hauteurs, pente, commune et décomposition des volumes sont extraites et pré-remplies." },
+      { t: "Vérifiez et générez", d: "Contrôlez la lecture proposée, ajustez si besoin, puis générez : le devis et la 3D reprennent la géométrie du plan." },
     ],
   },
   {
     slug: "multi-ouvrages", num: "03",
     title: "Multiplier les ouvrages dans un seul devis",
-    intro: "Le mode standard du formulaire cree un seul ouvrage. En choisissant Structure personnalisee dans le champ Type de structure, vous accumulez plusieurs ouvrages sur un meme rendu 3D et un meme devis : l'intelligence de DEVIA analyse et choisit l'emplacement et l'organisation de chaque ouvrage ajoute autour de l'ouvrage de base, dans le respect des regles de construction.",
+    intro: "Le mode standard du formulaire crée un seul ouvrage. En choisissant Structure personnalisée dans le champ Type de structure, vous accumulez plusieurs ouvrages sur un même rendu 3D et un même devis : l'intelligence de DEVIA analyse et choisit l'emplacement et l'organisation de chaque ouvrage ajouté autour de l'ouvrage de base, dans le respect des règles de construction.",
     etapes: [
-      { t: "Choisissez Structure personnalisee", d: "Dans le formulaire, champ Type de structure : selectionnez Structure personnalisee pour passer en mode multi-ouvrages." },
-      { t: "Accumulez les ouvrages", d: "Decrivez l'ouvrage de base puis ajoutez les suivants - maison, garage, sas, balcon - chacun avec ses dimensions." },
-      { t: "Laissez DEVIA assembler", d: "Chaque ouvrage est calcule pour lui-meme, puis positionne et organise autour de l'ouvrage de base. Un seul rendu 3D, un seul devis." },
+      { t: "Choisissez Structure personnalisée", d: "Dans le formulaire, champ Type de structure : sélectionnez Structure personnalisée pour passer en mode multi-ouvrages." },
+      { t: "Accumulez les ouvrages", d: "Décrivez l'ouvrage de base puis ajoutez les suivants - maison, garage, sas, balcon - chacun avec ses dimensions." },
+      { t: "Laissez DEVIA assembler", d: "Chaque ouvrage est calculé pour lui-même, puis positionné et organisé autour de l'ouvrage de base. Un seul rendu 3D, un seul devis." },
     ],
   },
   {
     slug: "catalogue-de-prix", num: "04",
-    title: "Apportez votre propre catalogue a vos projets",
-    intro: "DEVIA possede nativement un catalogue de prix base sur une moyenne du marche, actualise regulierement : vos projets sont chiffres sur les prix du marche DEVIA. En apportant vos materiaux et leurs prix, ce sont eux qui s'appliquent a vos projets - et le marche DEVIA complete pour les materiaux manquants de votre catalogue.",
+    title: "Apportez votre propre catalogue à vos projets",
+    intro: "DEVIA possède nativement un catalogue de prix basé sur une moyenne du marché, actualisé régulièrement : vos projets sont chiffrés sur les prix du marché DEVIA. En apportant vos matériaux et leurs prix, ce sont eux qui s'appliquent à vos projets - et le marché DEVIA complète pour les matériaux manquants de votre catalogue.",
     etapes: [
-      { t: "Remplissez votre catalogue", d: "Page Catalogue : ajoutez vos materiaux avec leur designation, leur unite et votre prix." },
-      { t: "Choisissez le catalogue du devis", d: "Au moment de generer, selectionnez Mon catalogue : vos prix s'appliquent en priorite au chiffrage." },
-      { t: "Completez avec le marche", d: "Pour les materiaux absents de votre catalogue, DEVIA complete automatiquement avec les prix du marche." },
+      { t: "Remplissez votre catalogue", d: "Page Catalogue : ajoutez vos matériaux avec leur désignation, leur unité et votre prix." },
+      { t: "Choisissez le catalogue du devis", d: "Au moment de générer, sélectionnez Mon catalogue : vos prix s'appliquent en priorité au chiffrage." },
+      { t: "Complétez avec le marché", d: "Pour les matériaux absents de votre catalogue, DEVIA complète automatiquement avec les prix du marché." },
     ],
   },
   {
     slug: "tableau-calcul", num: "05",
-    title: "Sections mini ou conseillees",
-    intro: "DEVIA propose aux professionnels - charpentiers comme bureaux d'etudes - deux types de sections calculees selon l'Eurocode 5. Les sections MINI sont les sections minimum requises pour qu'un element tienne l'ouvrage : le resultat strict du calcul. Les sections CONSEILLEES repondent a l'usage metier et aux attentes esthetiques de la region.",
+    title: "Sections mini ou conseillées",
+    intro: "DEVIA propose aux professionnels - charpentiers comme bureaux d'études - deux types de sections calculées selon l'Eurocode 5. Les sections MINI sont les sections minimum requises pour qu'un élément tienne l'ouvrage : le résultat strict du calcul. Les sections CONSEILLÉES répondent à l'usage métier et aux attentes esthétiques de la région.",
     etapes: [
-      { t: "Ouvrez l'onglet Calcul", d: "Apres la generation, l'onglet Calcul affiche charges permanentes, neige, vent et verifications Eurocode 5 selon votre commune." },
-      { t: "Lisez la section mini", d: "La section minimum requise par le calcul pour chaque element de l'ouvrage." },
-      { t: "Comparez avec la conseillee", d: "La section d'usage metier et regional, affichee par defaut - un bouton permet de basculer entre mini et conseillee sur la vue 3D." },
+      { t: "Ouvrez l'onglet Calcul", d: "Après la génération, l'onglet Calcul affiche charges permanentes, neige, vent et vérifications Eurocode 5 selon votre commune." },
+      { t: "Lisez la section mini", d: "La section minimum requise par le calcul pour chaque élément de l'ouvrage." },
+      { t: "Comparez avec la conseillée", d: "La section d'usage métier et régional, affichée par défaut - un bouton permet de basculer entre mini et conseillée sur la vue 3D." },
     ],
   },
   {
     slug: "export-pdf-ifc", num: "06",
-    title: "Donnez du sens a votre travail",
-    intro: "La force de DEVIA est de vous accompagner de A a Z dans votre projet. Une fois le devis termine, exportez le PDF pour le presenter au client. S'il donne suite au chantier, DEVIA exporte la structure 3D vers vos logiciels de conception habituels grace a l'export IFC - pour continuer vos travaux la ou DEVIA s'arrete.",
+    title: "Donnez du sens à votre travail",
+    intro: "La force de DEVIA est de vous accompagner de A à Z dans votre projet. Une fois le devis terminé, exportez le PDF pour le présenter au client. S'il donne suite au chantier, DEVIA exporte la structure 3D vers vos logiciels de conception habituels grâce à l'export IFC - pour continuer vos travaux là où DEVIA s'arrête.",
     etapes: [
-      { t: "Exportez le devis PDF", d: "Logo, coordonnees, postes chiffres et vues 3D : le document est pret a etre presente au client." },
-      { t: "Le client valide", d: "Le devis devient chantier : la structure calculee dans DEVIA sert de base a la suite des travaux." },
-      { t: "Exportez en IFC", d: "Bouton Exporter IFC sur la vue 3D : chaque piece part avec sa position, son orientation et sa section vers vos logiciels de conception." },
+      { t: "Exportez le devis PDF", d: "Logo, coordonnées, postes chiffrés et vues 3D : le document est prêt à être présenté au client." },
+      { t: "Le client valide", d: "Le devis devient chantier : la structure calculée dans DEVIA sert de base à la suite des travaux." },
+      { t: "Exportez en IFC", d: "Bouton Exporter IFC sur la vue 3D : chaque pièce part avec sa position, son orientation et sa section vers vos logiciels de conception." },
     ],
   },
 ];
@@ -116,7 +116,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </p>
           )}
           <div className="mt-16 rounded-2xl border border-dashed border-slate-300 bg-slate-50 py-16 text-center">
-            <p className="text-sm font-semibold tracking-wide text-slate-500">Video pas-a-pas a venir</p>
+            <p className="text-sm font-semibold tracking-wide text-slate-500">Vidéo pas-à-pas à venir</p>
           </div>
         </div>
       </section>

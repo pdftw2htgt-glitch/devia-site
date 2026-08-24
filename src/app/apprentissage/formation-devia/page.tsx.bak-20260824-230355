@@ -6,17 +6,17 @@ export const metadata = {
 };
 
 const points = [
-  "Générer un devis complet à partir d'un mail de client ou d'un plan PDF.",
-  "Lire le tableau de calcul : sections mini, sections conseillées, vérifications Eurocode 5.",
+  "Generer un devis complet a partir d'un mail de client ou d'un plan PDF.",
+  "Lire le tableau de calcul : sections mini, sections conseillees, verifications Eurocode 5.",
   "Exporter le devis en PDF pour votre client et la structure en IFC pour vos autres logiciels.",
 ];
 
 const guides = [
-  { slug: "devis-standard", num: "01", title: "Votre premier devis en quelques secondes", description: "Décrivez le projet en langage naturel, ou collez le mail de votre client. DEVIA détecte le type de structure, génère le devis et la 3D." },
-  { slug: "importer-un-plan", num: "02", title: "Importer un plan PDF ou une photo", description: "Déposez le document : dimensions, pente, hauteur et commune sont extraites et pré-remplies. Vérifiez, ajustez, générez." },
-  { slug: "multi-ouvrages", num: "03", title: "Créer un projet multi-ouvrages", description: "Ajoutez plusieurs structures à un même projet : maison, balcon, appentis. DEVIA les calcule une par une et les assemble en 3D." },
-  { slug: "catalogue-de-prix", num: "04", title: "Renseigner votre catalogue de prix", description: "Importez vos prix d'entreprise : DEVIA les applique en priorité à tous vos devis, et peut compléter avec les prix du marché." },
-  { slug: "tableau-calcul", num: "05", title: "Lire le tableau Calcul", description: "Sections mini (calcul strict) et sections conseillées (usage métier et régional) : comprenez ce que DEVIA vérifie selon Eurocode 5." },
+  { slug: "devis-standard", num: "01", title: "Votre premier devis en quelques secondes", description: "Decrivez le projet en langage naturel, ou collez le mail de votre client. DEVIA detecte le type de structure, genere le devis et la 3D." },
+  { slug: "importer-un-plan", num: "02", title: "Importer un plan PDF ou une photo", description: "Deposez le document : dimensions, pente, hauteur et commune sont extraites et pre-remplies. Verifiez, ajustez, generez." },
+  { slug: "multi-ouvrages", num: "03", title: "Creer un projet multi-ouvrages", description: "Ajoutez plusieurs structures a un meme projet : maison, balcon, appentis. DEVIA les calcule une par une et les assemble en 3D." },
+  { slug: "catalogue-de-prix", num: "04", title: "Renseigner votre catalogue de prix", description: "Importez vos prix d'entreprise : DEVIA les applique en priorite a tous vos devis, et peut completer avec les prix du marche." },
+  { slug: "tableau-calcul", num: "05", title: "Lire le tableau Calcul", description: "Sections mini (calcul strict) et sections conseillees (usage metier et regional) : comprenez ce que DEVIA verifie selon Eurocode 5." },
   { slug: "export-pdf-ifc", num: "06", title: "Exporter en PDF et IFC", description: "Le devis final avec vues 3D pour votre client, et l'export IFC pour vos autres logiciels de conception." },
 ];
 
@@ -29,7 +29,7 @@ export default function FormationDeviaPage() {
             <p className="text-sm font-semibold tracking-widest text-amber-600 uppercase mb-4">Apprentissage</p>
             <h1 className="text-5xl font-bold tracking-tight text-slate-900 mb-6">Formation DEVIA</h1>
             <p className="text-xl text-slate-600 leading-relaxed">
-              DEVIA s'apprend en pratiquant. Chaque guide part d'un cas réel : un mail de
+              DEVIA s'apprend en pratiquant. Chaque guide part d'un cas reel : un mail de
               client, un plan PDF, un catalogue de prix. En six guides courts, vous savez
               generer, verifier et exporter un devis complet.
             </p>

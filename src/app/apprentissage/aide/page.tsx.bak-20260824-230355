@@ -6,15 +6,15 @@ export const metadata = {
 };
 
 const inclus = [
-  { title: "Support par email inclus", desc: "30 jours de support inclus avec la formule standard, dès l'installation. Vous écrivez, l'équipe répond." },
-  { title: "Prioritaire avec la maintenance", desc: "Avec la maintenance, le support devient prioritaire et illimité, aussi longtemps que vous utilisez DEVIA." },
-  { title: "Vos remarques comptent", desc: "Un besoin, une idée de fonctionnalité : vos retours alimentent directement le développement de DEVIA." },
+  { title: "Support par email inclus", desc: "30 jours de support inclus avec la formule standard, des l'installation. Vous ecrivez, l'equipe repond." },
+  { title: "Prioritaire avec la maintenance", desc: "Avec la maintenance, le support devient prioritaire et illimite, aussi longtemps que vous utilisez DEVIA." },
+  { title: "Vos remarques comptent", desc: "Un besoin, une idee de fonctionnalite : vos retours alimentent directement le developpement de DEVIA." },
 ];
 
 const faq = [
-  { q: "Comment contacter le support ?", a: "Par email, via la page Contact. Décrivez votre question et joignez une capture d'écran si besoin : l'équipe vous répond directement." },
-  { q: "Le support est-il inclus dans le prix ?", a: "Oui. La formule standard inclut 30 jours de support par email. Avec la maintenance, le support devient prioritaire et illimité." },
-  { q: "Je ne trouve pas la réponse dans les guides ?", a: "La formation couvre les six gestes essentiels, du premier devis à l'export. Pour tout le reste, écrivez-nous : si une question revient souvent, elle devient un guide." },
+  { q: "Comment contacter le support ?", a: "Par email, via la page Contact. Decrivez votre question et joignez une capture d'ecran si besoin : l'equipe vous repond directement." },
+  { q: "Le support est-il inclus dans le prix ?", a: "Oui. La formule standard inclut 30 jours de support par email. Avec la maintenance, le support devient prioritaire et illimite." },
+  { q: "Je ne trouve pas la reponse dans les guides ?", a: "La formation couvre les six gestes essentiels, du premier devis a l'export. Pour tout le reste, ecrivez-nous : si une question revient souvent, elle devient un guide." },
 ];
 
 export default function AidePage() {
@@ -26,8 +26,8 @@ export default function AidePage() {
             <p className="text-sm font-semibold tracking-widest text-amber-600 uppercase mb-4">Apprentissage</p>
             <h1 className="text-5xl font-bold tracking-tight text-slate-900 mb-6">Aide</h1>
             <p className="text-xl text-slate-600 leading-relaxed">
-              Une question, un blocage, une idée ? Le support DEVIA se fait par email,
-              directement avec l'équipe qui développe le logiciel. Chaque question recue
+              Une question, un blocage, une idee ? Le support DEVIA se fait par email,
+              directement avec l'equipe qui developpe le logiciel. Chaque question recue
               fait progresser les guides et le produit.
             </p>
           </div>
@@ -49,7 +49,7 @@ export default function AidePage() {
 
       <section className="py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-8 text-center">Questions fréquentes</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-8 text-center">Questions frequentes</h2>
           <div className="space-y-4">
             {faq.map((f) => (
               <details key={f.q} className="group bg-white border border-slate-200 rounded-2xl">
