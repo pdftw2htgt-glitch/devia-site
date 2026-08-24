@@ -7,37 +7,37 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { href: "/fonctionnalites", label: "Fonctionnalites" },
+    { href: "/fonctionnalites", label: "Fonctionnalités" },
     { href: "/solutions", label: "Solutions" },
     { href: "/apprentissage", label: "Apprentissage" },
-    { href: "/actualite", label: "Actualite" },
+    { href: "/actualite", label: "Actualité" },
     { href: "/tarifs", label: "Tarifs" },
-    { href: "/a-propos", label: "A propos" },
+    { href: "/a-propos", label: "À propos" },
     { href: "/contact", label: "Contact" },
   ];
 
   const solutionsMenu = {
     ouvrages: [
-      { href: "/solutions/charpente-traditionnelle", label: "Charpente traditionnelle", desc: "Fermes, pannes, chevrons calcules" },
-      { href: "/solutions/charpente-industrielle", label: "Charpente industrielle", desc: "Fermettes et grandes series" },
-      { href: "/solutions/construction-bois", label: "Construction bois", desc: "MOB et structures completes" },
+      { href: "/solutions/charpente-traditionnelle", label: "Charpente traditionnelle", desc: "Fermes, pannes, chevrons calculés" },
+      { href: "/solutions/charpente-industrielle", label: "Charpente industrielle", desc: "Fermettes et grandes séries" },
+      { href: "/solutions/construction-bois", label: "Construction bois", desc: "MOB et structures complètes" },
       { href: "/solutions/charpente-couverture", label: "Charpente couverture", desc: "Couverture et calepinage complet" },
-      { href: "/solutions/extension", label: "Extension", desc: "Agrandissements et surelevations" },
+      { href: "/solutions/extension", label: "Extension", desc: "Agrandissements et surélévations" },
       { href: "/solutions/multi-structure", label: "Multi-structure", desc: "Plusieurs ouvrages, un seul devis" },
     ],
     services: [
-      { href: "/solutions/neuf-renovation", label: "Neuf & renovation", desc: "Projets neufs et reprises d'existant" },
-      { href: "/solutions/etude-calcul", label: "Etude & calcul de structure", desc: "Dimensionnement Eurocode 5" },
-      { href: "/solutions/logistique", label: "Logistique", desc: "Metre, debit, approvisionnement" },
+      { href: "/solutions/neuf-renovation", label: "Neuf & rénovation", desc: "Projets neufs et reprises d'existant" },
+      { href: "/solutions/etude-calcul", label: "Étude & calcul de structure", desc: "Dimensionnement Eurocode 5" },
+      { href: "/solutions/logistique", label: "Logistique", desc: "Métré, débit, approvisionnement" },
       { href: "/solutions/export-ifc", label: "Export IFC", desc: "Vers vos logiciels de conception" },
-      { href: "/solutions/conception-chiffrage", label: "Conception & chiffrage", desc: "Du plan au devis chiffre" },
+      { href: "/solutions/conception-chiffrage", label: "Conception & chiffrage", desc: "Du plan au devis chiffré" },
     ],
   };
 
   const apprentissageMenu = [
-    { href: "/apprentissage/formation-devia", label: "Formation DEVIA", desc: "Prendre en main le logiciel pas a pas" },
-    { href: "/apprentissage/programmes", label: "Nos programmes", desc: "Parcours guides selon votre profil" },
-    { href: "/apprentissage/aide", label: "Aide", desc: "Questions frequentes et support" },
+    { href: "/apprentissage/formation-devia", label: "Formation DEVIA", desc: "Prendre en main le logiciel pas à pas" },
+    { href: "/apprentissage/programmes", label: "Nos programmes", desc: "Parcours guidés selon votre profil" },
+    { href: "/apprentissage/aide", label: "Aide", desc: "Questions fréquentes et support" },
   ];
 
   return (
