@@ -3,7 +3,7 @@ export default function CgvPage() {
     <section className="py-24">
       <div className="max-w-3xl mx-auto px-6">
         <h1 className="text-4xl font-bold tracking-tight text-slate-900 mb-8">
-          Conditions Générales de Vente
+          Conditions Generales de Vente
         </h1>
         <div className="prose prose-lg text-slate-700 space-y-6">
           <p className="text-sm text-amber-700 bg-amber-50 border border-amber-200 p-4 rounded-lg">
@@ -27,7 +27,7 @@ export default function CgvPage() {
 
           <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 3 - Prix et paiement</h2>
           <p>
-            Le prix de l&apos;installation standard débute à 3 500 &euro; hors options (paiement unique). La maintenance est facturée 150 &euro; par mois. Les formules personnalisées font l&apos;objet d&apos;un devis spécifique établi lors d&apos;un entretien.
+            Le prix de l&apos;installation standard debute a 3 500 &euro; hors options (paiement unique). La maintenance est facturee 150 &euro; par mois. Les formules personnalisees font l&apos;objet d&apos;un devis specifique etabli lors d&apos;un entretien.
             L&apos;abonnement maintenance optionnel est de 35 &euro; par mois,
             sans engagement, annulable a tout moment.
           </p>
@@ -39,14 +39,14 @@ export default function CgvPage() {
             personnelle et ne peut etre partagee.
           </p>
 
-          <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 5 - Droit de rétractation</h2>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 5 - Droit de retractation</h2>
           <p>
             Conformement a l&apos;article L221-28 du Code de la consommation,
             le droit de retractation ne s&apos;applique pas aux contenus
             numeriques fournis sur un support immateriel apres execution.
           </p>
 
-          <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 6 - Responsabilité</h2>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 6 - Responsabilite</h2>
           <p>
             DEVIA est un outil d&apos;aide au chiffrage. La responsabilite finale
             de l&apos;exactitude des devis transmis aux clients tiers incombe
@@ -56,7 +56,7 @@ export default function CgvPage() {
 
           <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 7 - Litiges</h2>
           <p>
-            En cas de litige, une solution amiable sera recherchée. A defaut,
+            En cas de litige, une solution amiable sera recherchee. A defaut,
             les tribunaux francais seront seuls competents.
           </p>
         </div>

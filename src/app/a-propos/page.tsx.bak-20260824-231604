@@ -16,30 +16,30 @@ export default function AboutPage() {
             etre consacre a des projets plus serieux.
           </p>
           <p>
-            DEVIA répond aussi au problème du <strong>prix</strong> et de la
-            <strong> complexité</strong> des logiciels existants, concus pour
+            DEVIA repond aussi au probleme du <strong>prix</strong> et de la
+            <strong> complexite</strong> des logiciels existants, concus pour
             des bureaux d&apos;etudes, mais pas pour les artisans qui font
             le travail au quotidien.
           </p>
           <p>
-            Notre mission est de <strong>démocratiser l&apos;outillage numérique</strong>
+            Notre mission est de <strong>democratiser l&apos;outillage numerique</strong>
             {" "}pour les professionnels de la charpente. Que vous soyez un artisan solo
             ou une petite entreprise de 5 personnes, vous meritez un outil puissant,
             intuitif, et a un prix juste.
           </p>
           <p>
             DEVIA combine le meilleur de l&apos;intelligence artificielle moderne
-            avec l&apos;expertise des normes du bâtiment français (Eurocode).
-            Le résultat : des devis professionnels, générés en quelques secondes,
+            avec l&apos;expertise des normes du batiment francais (Eurocode).
+            Le resultat : des devis professionnels, generes en quelques secondes,
             avec une visualisation 3D claire pour vos clients.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">Nos valeurs</h2>
           <ul className="space-y-3">
-            <li><strong>Simplicité.</strong> Un logiciel doit être évident à utiliser.</li>
-            <li><strong>Fiabilité.</strong> Des calculs basés sur les normes officielles, pour des devis solides et défendables.</li>
-            <li><strong>Confidentialité.</strong> Vos données d&apos;entreprise restent chez vous. Aucun partage avec des IA tierces.</li>
-            <li><strong>Efficacité.</strong> Réduire à quelques minutes ce qui prenait des heures, pour vous concentrer sur vos vrais chantiers.</li>
+            <li><strong>Simplicite.</strong> Un logiciel doit etre evident a utiliser.</li>
+            <li><strong>Fiabilite.</strong> Des calculs bases sur les normes officielles, pour des devis solides et defendables.</li>
+            <li><strong>Confidentialite.</strong> Vos donnees d&apos;entreprise restent chez vous. Aucun partage avec des IA tierces.</li>
+            <li><strong>Efficacite.</strong> Reduire a quelques minutes ce qui prenait des heures, pour vous concentrer sur vos vrais chantiers.</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">Le projet</h2>

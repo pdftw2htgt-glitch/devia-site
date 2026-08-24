@@ -6,7 +6,7 @@ export default function ContactPage() {
           Contactez-nous.
         </h1>
         <p className="text-xl text-slate-600 mb-12">
-          Une question ? Une démonstration ? Écrivez-nous, nous répondons sous 24h.
+          Une question ? Une demonstration ? Ecrivez-nous, nous repondons sous 24h.
         </p>
 
         <div className="bg-slate-50 rounded-2xl p-8 mb-12">
@@ -18,14 +18,14 @@ export default function ContactPage() {
         </div>
 
         <div className="bg-slate-50 rounded-2xl p-8">
-          <h2 className="text-xl font-semibold text-slate-900 mb-4">Démo personnalisée</h2>
+          <h2 className="text-xl font-semibold text-slate-900 mb-4">Demo personnalisee</h2>
           <p className="text-slate-700 mb-4">
             Vous voulez voir DEVIA en action sur un de vos chantiers types ?
-            Réservez 30 minutes avec nous, nous vous montrerons comment DEVIA
+            Reservez 30 minutes avec nous, nous vous montrerons comment DEVIA
             transformerait votre workflow.
           </p>
           <a href="mailto:demo@devia.fr?subject=Demande de demo DEVIA" className="inline-flex items-center bg-slate-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors">
-            Réserver une démo
+            Reserver une demo
           </a>
         </div>
       </div>
