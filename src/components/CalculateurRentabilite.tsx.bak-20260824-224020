@@ -19,9 +19,9 @@ export default function CalculateurRentabilite() {
     <div className="max-w-3xl mx-auto px-6 mt-24">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-slate-900 mb-3">
-          Combien vous coûte le chiffrage ?
+          Combien vous coute le chiffrage ?
         </h2>
-        <p className="text-slate-600">Ajustez les chiffres à votre réalité.</p>
+        <p className="text-slate-600">Ajustez les chiffres a votre realite.</p>
       </div>
       <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
         <div className="grid sm:grid-cols-3 gap-5 mb-8">
@@ -39,7 +39,7 @@ export default function CalculateurRentabilite() {
           </div>
         </div>
         <div className="bg-slate-50 rounded-xl p-6 text-center">
-          <div className="text-sm text-slate-500 mb-1">Votre chiffrage vous coûte</div>
+          <div className="text-sm text-slate-500 mb-1">Votre chiffrage vous coute</div>
           <div className="text-4xl font-bold text-slate-900 mb-4">
             {fmt(coutMois)} &euro; <span className="text-xl text-slate-500 font-semibold">/ mois</span>
           </div>
@@ -48,7 +48,7 @@ export default function CalculateurRentabilite() {
           </div>
         </div>
         <p className="text-center text-xs text-slate-400 italic mt-5">
-          Estimation indicative. DEVIA ramène chaque devis à quelques minutes.
+          Estimation indicative. DEVIA ramene chaque devis a quelques minutes.
         </p>
       </div>
     </div>
