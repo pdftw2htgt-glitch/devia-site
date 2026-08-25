@@ -38,7 +38,7 @@ export default function LegalPage() {
           <h2 className="text-xl font-semibold text-slate-900 mt-8">Cookies</h2>
           <p>
             Le site utilise uniquement des cookies techniques nécessaires
-            à l&apos;authentification. Aucun cookie de tracking ou publicitaire
+            a l&apos;authentification. Aucun cookie de tracking ou publicitaire
             n&apos;est utilisé.
           </p>
 
