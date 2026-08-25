@@ -1,0 +1,56 @@
+export default function AboutPage() {
+  return (
+    <section className="py-24">
+      <div className="max-w-3xl mx-auto px-6">
+        <h1 className="text-5xl font-bold tracking-tight text-slate-900 mb-8">
+          Notre mission.
+        </h1>
+        <div className="prose prose-lg text-slate-700 space-y-6">
+          <p className="text-xl leading-relaxed">
+            DEVIA est ne d&apos;un constat simple : les entreprises de charpente
+            sont submergees de petits devis qui ont peu de chances d&apos;aboutir.
+          </p>
+          <p>
+            Ces devis prennent en moyenne <strong>4 heures</strong> a chiffrer,
+            ne sont pas factures, et representent un temps perdu qui pourrait
+            etre consacre a des projets plus serieux.
+          </p>
+          <p>
+            DEVIA répond aussi au problème du <strong>prix</strong> et de la
+            <strong> complexité</strong> des logiciels existants, concus pour
+            des bureaux d&apos;etudes, mais pas pour les artisans qui font
+            le travail au quotidien.
+          </p>
+          <p>
+            Notre mission est de <strong>démocratiser l&apos;outillage numérique</strong>
+            {" "}pour les professionnels de la charpente. Que vous soyez un artisan solo
+            ou une petite entreprise de 5 personnes, vous meritez un outil puissant,
+            intuitif, et a un prix juste.
+          </p>
+          <p>
+            DEVIA combine le meilleur de l&apos;intelligence artificielle moderne
+            avec l&apos;expertise des normes du bâtiment français (Eurocode).
+            Le résultat : des devis professionnels, générés en quelques secondes,
+            avec une visualisation 3D claire pour vos clients.
+          </p>
+
+          <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">Nos valeurs</h2>
+          <ul className="space-y-3">
+            <li><strong>Simplicité.</strong> Un logiciel doit être évident à utiliser.</li>
+            <li><strong>Fiabilité.</strong> Des calculs basés sur les normes officielles, pour des devis solides et défendables.</li>
+            <li><strong>Confidentialité.</strong> Vos données d&apos;entreprise restent chez vous. Aucun partage avec des IA tierces.</li>
+            <li><strong>Efficacité.</strong> Réduire à quelques minutes ce qui prenait des heures, pour vous concentrer sur vos vrais chantiers.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">Le projet</h2>
+          <p>
+            DEVIA est un logiciel francais, developpe par une equipe passionnee
+            par le bois et le code. Nous travaillons en proximite avec des
+            charpentiers professionnels pour faire evoluer le logiciel en
+            fonction des besoins reels du terrain.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -7,57 +7,57 @@ export default function CgvPage() {
         </h1>
         <div className="prose prose-lg text-slate-700 space-y-6">
           <p className="text-sm text-amber-700 bg-amber-50 border border-amber-200 p-4 rounded-lg">
-            <strong>Document provisoire.</strong> Ces CGV doivent être validées
-            par un juriste avant utilisation commerciale réelle.
+            <strong>Document provisoire.</strong> Ces CGV doivent etre validees
+            par un juriste avant utilisation commerciale reelle.
           </p>
 
           <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 1 - Objet</h2>
           <p>
-            Les présentes CGV régissent les relations contractuelles entre DEVIA
-            (l&apos;Éditeur) et toute personne physique ou morale (le Client)
+            Les presentes CGV regissent les relations contractuelles entre DEVIA
+            (l&apos;Editeur) et toute personne physique ou morale (le Client)
             achetant le logiciel DEVIA.
           </p>
 
           <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 2 - Produit</h2>
           <p>
-            Le logiciel DEVIA est un outil de génération de devis pour la
+            Le logiciel DEVIA est un outil de generation de devis pour la
             charpente, accessible via Internet, fourni sous la forme d&apos;un
-            accès personnel par clé de licence.
+            acces personnel par cle de licence.
           </p>
 
           <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 3 - Prix et paiement</h2>
           <p>
             Le prix de l&apos;installation standard débute à 3 500 &euro; hors options (paiement unique). La maintenance est facturée 150 &euro; par mois. Les formules personnalisées font l&apos;objet d&apos;un devis spécifique établi lors d&apos;un entretien.
             L&apos;abonnement maintenance optionnel est de 35 &euro; par mois,
-            sans engagement, annulable à tout moment.
+            sans engagement, annulable a tout moment.
           </p>
 
           <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 4 - Licence</h2>
           <p>
-            Le Client bénéficie d&apos;une licence d&apos;utilisation personnelle
-            et non transférable du logiciel. La clé de licence est strictement
-            personnelle et ne peut être partagée.
+            Le Client beneficie d&apos;une licence d&apos;utilisation personnelle
+            et non transferable du logiciel. La cle de licence est strictement
+            personnelle et ne peut etre partagee.
           </p>
 
           <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 5 - Droit de rétractation</h2>
           <p>
-            Conformément a l&apos;article L221-28 du Code de la consommation,
-            le droit de rétractation ne s&apos;applique pas aux contenus
-            numériques fournis sur un support immatériel après exécution.
+            Conformement a l&apos;article L221-28 du Code de la consommation,
+            le droit de retractation ne s&apos;applique pas aux contenus
+            numeriques fournis sur un support immateriel apres execution.
           </p>
 
           <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 6 - Responsabilité</h2>
           <p>
-            DEVIA est un outil d&apos;aide au chiffrage. La responsabilité finale
+            DEVIA est un outil d&apos;aide au chiffrage. La responsabilite finale
             de l&apos;exactitude des devis transmis aux clients tiers incombe
-            au professionnel utilisateur. DEVIA ne saurait être tenu responsable
-            d&apos;erreurs de saisie ou d&apos;interprétation.
+            au professionnel utilisateur. DEVIA ne saurait etre tenu responsable
+            d&apos;erreurs de saisie ou d&apos;interpretation.
           </p>
 
           <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 7 - Litiges</h2>
           <p>
-            En cas de litige, une solution amiable sera recherchée. À défaut,
-            les tribunaux français seront seuls compétents.
+            En cas de litige, une solution amiable sera recherchée. A defaut,
+            les tribunaux francais seront seuls competents.
           </p>
         </div>
       </div>
