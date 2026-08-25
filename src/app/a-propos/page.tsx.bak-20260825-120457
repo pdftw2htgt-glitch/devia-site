@@ -17,7 +17,7 @@ export default function AboutPage() {
           </p>
           <p>
             DEVIA répond aussi au problème du <strong>prix</strong> et de la
-            <strong> complexité</strong>{" "}des logiciels existants, concus pour
+            <strong> complexité</strong> des logiciels existants, concus pour
             des bureaux d&apos;etudes, mais pas pour les artisans qui font
             le travail au quotidien.
           </p>
