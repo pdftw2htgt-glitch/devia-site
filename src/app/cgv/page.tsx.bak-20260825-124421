@@ -28,7 +28,7 @@ export default function CgvPage() {
           <h2 className="text-xl font-semibold text-slate-900 mt-8">Article 3 - Prix et paiement</h2>
           <p>
             Le prix de l&apos;installation standard débute à 3 500 &euro; hors options (paiement unique). La maintenance est facturée 150 &euro; par mois. Les formules personnalisées font l&apos;objet d&apos;un devis spécifique établi lors d&apos;un entretien.
-            L&apos;abonnement maintenance optionnel est de 150 &euro; par mois,
+            L&apos;abonnement maintenance optionnel est de 35 &euro; par mois,
             sans engagement, annulable à tout moment.
           </p>
 
