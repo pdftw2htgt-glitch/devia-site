@@ -1,3 +1,5 @@
+import SignalerProbleme from "@/components/SignalerProbleme";
+
 export default function ContactPage() {
   return (
     <section className="py-24">
@@ -17,7 +19,7 @@ export default function ContactPage() {
           </a>
         </div>
 
-        <div className="bg-slate-50 rounded-2xl p-8">
+        <div className="bg-slate-50 rounded-2xl p-8 mb-12">
           <h2 className="text-xl font-semibold text-slate-900 mb-4">Démo personnalisée</h2>
           <p className="text-slate-700 mb-4">
             Vous voulez voir DEVIA en action sur un de vos chantiers types ?
@@ -28,6 +30,8 @@ export default function ContactPage() {
             Réserver une démo
           </a>
         </div>
+
+        <SignalerProbleme />
       </div>
     </section>
   );
