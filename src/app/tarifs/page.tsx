@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CalculateurRentabilite from "@/components/CalculateurRentabilite";
+import BoutonAchat from "@/components/BoutonAchat";
 
 export default function PricingPage() {
   return (
@@ -40,9 +41,21 @@ export default function PricingPage() {
               <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Export PDF illimité</li>
               <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> Mises à jour et support inclus dans la maintenance</li>
             </ul>
-            <button className="w-full bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors">
-              Acheter DEVIA
-            </button>
+            {/* Le paiement ne s affiche que la ou Stripe est configure : en ligne, tant que les
+                cles ne sont pas posees sur Vercel, le visiteur voit un bouton de contact plutot
+                qu un bouton d achat qui tomberait en erreur.
+                ACHAT_OUVERT=1 ouvre la vente au public ; sans elle, seule la page /acheter
+                (sans lien depuis le site) permet de passer commande. */}
+            {process.env.ACHAT_OUVERT === "1" ? (
+              <BoutonAchat
+                libelle="Acheter DEVIA"
+                className="w-full bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors"
+              />
+            ) : (
+              <Link href="/contact" className="block w-full text-center bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors">
+                Nous contacter
+              </Link>
+            )}
           </div>
 
           {/* FORMULE PERSONNALISÉE */}
