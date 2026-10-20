@@ -16,14 +16,24 @@ export async function POST(req: Request) {
   const stripe = new Stripe(cleStripe);
   const origine = new URL(req.url).origin;
 
+  // Langue envoyee par le bouton d achat. Elle ne sert qu a choisir les pages de retour :
+  // un acheteur anglophone revient sur /en/merci, pas sur la page francaise.
+  let prefixe = "";
+  try {
+    const corps = await req.json();
+    if (corps && corps.lang === "en") prefixe = "/en";
+  } catch {
+    prefixe = "";
+  }
+
   try {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: [{ price: idPrix, quantity: 1 }],
       // Fait apparaitre le champ "Code promotionnel" sur la page de paiement.
       allow_promotion_codes: true,
-      success_url: origine + "/merci?session_id={CHECKOUT_SESSION_ID}",
-      cancel_url: origine + "/tarifs",
+      success_url: origine + prefixe + "/merci?session_id={CHECKOUT_SESSION_ID}",
+      cancel_url: origine + prefixe + "/tarifs",
     });
     return NextResponse.json({ url: session.url });
   } catch (e) {
