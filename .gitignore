@@ -43,3 +43,13 @@ next-env.d.ts
 # Backups et scripts de migration
 *.backup_*
 *.py
+
+# Scripts de modification deja appliques et sauvegardes horodatees :
+# ils restent sur le disque, hors du depot et hors du deploiement.
+scripts/
+_sauvegardes/
+*.bak
+*.bak-*
+*.bak_*
+*.backup_*
+tsconfig.tsbuildinfo
