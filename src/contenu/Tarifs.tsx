@@ -1,13 +1,13 @@
 import Link from "next/link";
 import CalculateurRentabilite from "@/components/CalculateurRentabilite";
-import BoutonAchat from "@/components/BoutonAchat";
+import AchatConnecte from "@/components/AchatConnecte";
 import { dico, lien, type Langue } from "../i18n";
 
 export default function Tarifs({ lang }: { lang: Langue }) {
   const t = dico(lang).tarifs;
   const L = (c: string) => lien(lang, c);
   const puce = (texte: string) => (
-    <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">&check;</span> {texte}</li>
+    <li className="flex gap-2 text-sm text-slate-700"><span className="text-green-600">✓</span> {texte}</li>
   );
 
   return (
@@ -41,7 +41,7 @@ export default function Tarifs({ lang }: { lang: Langue }) {
                 ACHAT_OUVERT=1 ouvre la vente au public ; sans elle, seule la page /acheter
                 (sans lien depuis le site) permet de passer commande. */}
             {process.env.ACHAT_OUVERT === "1" ? (
-              <BoutonAchat
+              <AchatConnecte
                 lang={lang}
                 libelle={t.acheter}
                 className="w-full bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors"

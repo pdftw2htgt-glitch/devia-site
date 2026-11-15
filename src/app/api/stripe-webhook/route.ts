@@ -86,13 +86,25 @@ export async function POST(req: Request) {
     const cle = genererCle();
     const dansUnAn = new Date(Date.now() + 365 * 24 * 3600 * 1000).toISOString();
 
+    // Le compte qui a paye (pose par /api/checkout). Si ce compte a deja une licence, la
+    // nouvelle reste orpheline : sa cle s active a la main, comme avant.
+    const idCompte = typeof session.client_reference_id === "string" ? session.client_reference_id : "";
+    let proprietaire: string | null = null;
+    if (/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(idCompte)) {
+      const sienne = await sb.from("licenses").select("id").eq("user_id", idCompte).limit(1);
+      if (sienne.error === null && sienne.data && sienne.data.length === 0) proprietaire = idCompte;
+    }
+
     const ins = await sb.from("licenses").insert({
       license_key: cle,
-      user_id: null,
+      user_id: proprietaire,
       installed_version: ref.installed_version,
       max_version: ref.max_version,
-      subscription_status: ref.subscription_status,
-      subscription_type: ref.subscription_type,
+      // Un achat seul n ouvre aucun abonnement de maintenance. Avant, le statut etait recopie
+      // sur la derniere licence creee : apres une licence d essai "active", un acheteur
+      // aurait eu une maintenance qu il n a pas payee.
+      subscription_status: "none",
+      subscription_type: null,
       subscription_expires_at: dansUnAn,
       stripe_purchase_id: session.id,
       stripe_customer_id: typeof session.customer === "string" ? session.customer : null,
@@ -102,7 +114,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: ins.error.message }, { status: 500 });
     }
 
-    console.log("[DEVIA] licence creee " + cle + " pour " + (session.customer_details?.email || "acheteur inconnu"));
+    console.log("[DEVIA] licence creee " + cle + " pour " + (session.customer_details?.email || "acheteur inconnu") +
+      (proprietaire ? " (rattachee au compte)" : " (a activer avec la cle)"));
     return NextResponse.json({ recu: true, license_key: cle });
   }
 

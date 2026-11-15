@@ -146,12 +146,10 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-3">
           <SelecteurLangue />
           <a
-            href="https://devia-iota.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href={L("/compte")}
             className="text-slate-600 hover:text-slate-900 text-sm font-medium"
           >
-            {t.connexion}
+            {t.compte}
           </a>
           <Link
             href={L("/tarifs")}
@@ -194,12 +192,10 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="https://devia-iota.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={L("/compte")}
               className="text-slate-700 py-2 text-sm font-medium"
             >
-              {t.connexion}
+              {t.compte}
             </a>
             <Link
               href={L("/tarifs")}

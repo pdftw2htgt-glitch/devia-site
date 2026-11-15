@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
+import { createClient } from "@supabase/supabase-js";
 
 export const runtime = "nodejs";
 
@@ -25,12 +26,40 @@ export async function POST(req: Request) {
   } catch {
     prefixe = "";
   }
+  const enAnglais = prefixe === "/en";
+
+  // Il faut un compte DEVIA pour acheter : le jeton de session envoye par le navigateur est
+  // verifie aupres de Supabase (cle de service, cote serveur uniquement). Le webhook
+  // rattachera la licence a ce compte, l acheteur n aura aucune cle a recopier.
+  const urlSupa = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+  const cleService = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
+  if (urlSupa === "" || cleService === "") {
+    return NextResponse.json({ error: "Supabase n est pas configure (.env.local)" }, { status: 500 });
+  }
+  const entete = req.headers.get("authorization") || "";
+  const jeton = entete.startsWith("Bearer ") ? entete.slice(7) : "";
+  const msgConnexion = enAnglais ? "Sign in to your DEVIA account to buy." : "Connectez-vous à votre compte DEVIA pour acheter.";
+  if (jeton === "") return NextResponse.json({ error: msgConnexion, code: "connexion" }, { status: 401 });
+  const sb = createClient(urlSupa, cleService, { auth: { persistSession: false } });
+  const lu = await sb.auth.getUser(jeton);
+  const compte = lu.data ? lu.data.user : null;
+  if (lu.error || compte === null) return NextResponse.json({ error: msgConnexion, code: "connexion" }, { status: 401 });
+  // Une licence par compte : activate_my_license refuse deja une deuxieme cle sur un compte.
+  const existante = await sb.from("licenses").select("id").eq("user_id", compte.id).limit(1);
+  if (existante.data && existante.data.length > 0) {
+    return NextResponse.json({
+      error: enAnglais
+        ? "This account already has a DEVIA licence. For another licence, please contact us."
+        : "Ce compte a déjà une licence DEVIA. Pour une licence de plus, contactez-nous.",
+      code: "deja_licence",
+    }, { status: 409 });
+  }
 
   // DEVIA ne se vend qu aux professionnels. La facture doit porter la raison sociale,
   // l adresse et l immatriculation de l acheteur : Stripe les demande sur la page de
   // paiement et les garde sur la session (tableau de bord Stripe, onglet Paiements).
   // Champ texte et non numerique : un charpentier suisse ou belge n a pas de SIRET.
-  const anglais = prefixe === "/en";
+  const anglais = enAnglais;
   const libelleImmat = anglais
     ? "Company registration no. (SIRET in France)"
     : "SIRET (ou n° d'immatriculation hors de France)";
@@ -42,6 +71,10 @@ export async function POST(req: Request) {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: [{ price: idPrix, quantity: 1 }],
+      // Le compte qui achete : le webhook y rattache la licence.
+      client_reference_id: compte.id,
+      customer_email: compte.email || undefined,
+      metadata: { user_id: compte.id },
       // Fait apparaitre le champ "Code promotionnel" sur la page de paiement.
       allow_promotion_codes: true,
       name_collection: { business: { enabled: true, optional: false } },
