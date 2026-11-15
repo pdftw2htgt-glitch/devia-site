@@ -26,7 +26,7 @@ export default function MentionsLegales({ lang }: { lang: Langue }) {
           <h2 className="text-xl font-semibold text-slate-900 mt-8">{t.m1T}</h2>
           <p>
             Vercel Inc.<br />
-            340 S Lemon Ave #4133, Walnut, CA 91789, USA<br />
+            440 N Barranca Ave #4133, Covina, CA 91723, USA<br />
             <a href="https://vercel.com" className="text-amber-700 hover:underline">vercel.com</a>
           </p>
 

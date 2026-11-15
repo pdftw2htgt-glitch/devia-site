@@ -26,12 +26,33 @@ export async function POST(req: Request) {
     prefixe = "";
   }
 
+  // DEVIA ne se vend qu aux professionnels. La facture doit porter la raison sociale,
+  // l adresse et l immatriculation de l acheteur : Stripe les demande sur la page de
+  // paiement et les garde sur la session (tableau de bord Stripe, onglet Paiements).
+  // Champ texte et non numerique : un charpentier suisse ou belge n a pas de SIRET.
+  const anglais = prefixe === "/en";
+  const libelleImmat = anglais
+    ? "Company registration no. (SIRET in France)"
+    : "SIRET (ou n° d'immatriculation hors de France)";
+  const avisPro = anglais
+    ? "For professionals only. By paying you accept the DEVIA terms of sale: " + origine + "/en/cgv"
+    : "Réservé aux professionnels. En payant, vous acceptez les conditions générales de vente de DEVIA : " + origine + "/cgv";
+
   try {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: [{ price: idPrix, quantity: 1 }],
       // Fait apparaitre le champ "Code promotionnel" sur la page de paiement.
       allow_promotion_codes: true,
+      name_collection: { business: { enabled: true, optional: false } },
+      billing_address_collection: "required",
+      custom_fields: [{
+        key: "siret",
+        label: { type: "custom", custom: libelleImmat },
+        type: "text",
+        text: { minimum_length: 9, maximum_length: 30 },
+      }],
+      custom_text: { submit: { message: avisPro } },
       success_url: origine + prefixe + "/merci?session_id={CHECKOUT_SESSION_ID}",
       cancel_url: origine + prefixe + "/tarifs",
     });
