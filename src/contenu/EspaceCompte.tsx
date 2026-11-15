@@ -29,6 +29,7 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
   const [erreur, setErreur] = useState("");
   const [info, setInfo] = useState("");
   const [veutAcheter, setVeutAcheter] = useState(false);
+  const [accepte, setAccepte] = useState(false);
   const [licence, setLicence] = useState<Licence | null>(null);
   const [licenceLue, setLicenceLue] = useState(false);
   const suiteLancee = useRef(false);
@@ -85,6 +86,7 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
     e.preventDefault();
     setErreur("");
     setInfo("");
+    if (mode === "inscription" && accepte === false) { setErreur(t.errAccepte); return; }
     setEnCours(true);
     if (mode === "connexion") {
       const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password: mdp });
@@ -146,6 +148,15 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
                   value={mdp} onChange={(e) => setMdp(e.target.value)} className={champ} />
                 {mode === "inscription" ? <p className="mt-1 text-xs text-slate-500">{t.mdpRegle}</p> : null}
               </div>
+              {mode === "inscription" ? (
+                <label htmlFor="compte-accepte" className="flex items-start gap-2 text-sm text-slate-600">
+                  <input id="compte-accepte" type="checkbox" required checked={accepte} onChange={(e) => setAccepte(e.target.checked)} className="mt-1" />
+                  <span>
+                    {t.accepte1} <Link href={L("/cgu")} target="_blank" className="text-amber-700 hover:underline">{t.accepteCgu}</Link>{" "}
+                    {t.accepte2} <Link href={L("/confidentialite")} target="_blank" className="text-amber-700 hover:underline">{t.accepteConf}</Link>.
+                  </span>
+                </label>
+              ) : null}
               <button type="submit" disabled={enCours} className="w-full bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors disabled:opacity-60">
                 {enCours ? t.enCours : (mode === "connexion" ? t.seConnecter : t.creer)}
               </button>

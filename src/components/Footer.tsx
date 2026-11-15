@@ -48,6 +48,8 @@ export default function Footer() {
             <li><Link href={L("/contact")} className="hover:text-white transition-colors">{n.contact}</Link></li>
             <li><Link href={L("/mentions-legales")} className="hover:text-white transition-colors">{t.mentions}</Link></li>
             <li><Link href={L("/cgv")} className="hover:text-white transition-colors">{t.cgv}</Link></li>
+            <li><Link href={L("/cgu")} className="hover:text-white transition-colors">{t.cgu}</Link></li>
+            <li><Link href={L("/confidentialite")} className="hover:text-white transition-colors">{t.confidentialite}</Link></li>
           </ul>
         </div>
       </div>

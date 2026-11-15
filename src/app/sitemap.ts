@@ -20,6 +20,8 @@ const PAGES = [
   "/a-propos",
   "/contact",
   "/cgv",
+  "/cgu",
+  "/confidentialite",
   "/mentions-legales",
 ]
   .concat(FICHES.map((f) => "/solutions/" + f.id))
