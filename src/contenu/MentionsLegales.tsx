@@ -11,15 +11,14 @@ export default function MentionsLegales({ lang }: { lang: Langue }) {
           {lang === "en" ? (
             <p className="text-sm text-slate-600 bg-slate-100 border border-slate-200 p-4 rounded-lg">{t.prevaut}</p>
           ) : null}
-          <p className="text-sm text-amber-700 bg-amber-50 border border-amber-200 p-4 rounded-lg">
-            <strong>{t.provisoire}</strong> {t.mlAvis}
-          </p>
-
           <h2 className="text-xl font-semibold text-slate-900 mt-8">{t.m0T}</h2>
           <p>
-            DEVIA<br />
+            {t.m0L1}<br />
             {t.m0L2}<br />
             {t.m0L3}<br />
+            {t.m0L4}<br />
+            {t.m0L5}<br />
+            {t.m0L6}<br />
             Email : contact@devia.fr
           </p>
 
