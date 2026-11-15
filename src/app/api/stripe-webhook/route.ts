@@ -1,16 +1,20 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
+import { randomInt } from "crypto";
 
 export const runtime = "nodejs";
 
 // Cle lisible a recopier a la main : DEVIA-XXXX-XXXX-XXXX.
 // L alphabet exclut 0/O et 1/I, qu on confond en lisant un mail.
+// La cle vaut un mot de passe : elle est tiree par randomInt (generateur
+// cryptographique de Node). Math.random est previsible pour qui en observe
+// assez de sorties, il ne doit jamais fabriquer un secret.
 function genererCle(): string {
   const alpha = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
   const bloc = () => {
     let s = "";
-    for (let i = 0; i < 4; i++) s += alpha.charAt(Math.floor(Math.random() * alpha.length));
+    for (let i = 0; i < 4; i++) s += alpha.charAt(randomInt(alpha.length));
     return s;
   };
   return "DEVIA-" + bloc() + "-" + bloc() + "-" + bloc();

@@ -2,21 +2,13 @@ import type { NextConfig } from "next";
 
 // En-tetes de securite.
 //
-// La CSP est posee en DEUX exemplaires, volontairement :
-//   - celle qui s APPLIQUE ne contient que des directives incapables de casser une page
-//     (frame-ancestors, base-uri, object-src) ;
-//   - celle qui OBSERVE decrit la regle complete, sans rien bloquer. Les manquements
-//     s affichent dans la console du navigateur. Une fois la console muette, on recopie
-//     la seconde dans la premiere.
-// Poser une CSP complete d un coup, c est risquer de casser le site en vente a l aveugle.
+// La CSP a d abord ete posee en observation seule (Report-Only) a cote d une version
+// minimale appliquee. Le 15/11, les 48 pages du site (francais et anglais) ont ete
+// parcourues avec un ecouteur securitypolicyviolation : aucun manquement. La regle
+// complete est donc appliquee. Si une page casse, la console du navigateur dit quelle
+// directive la bloque.
 
-const CSP_APPLIQUEE = [
-  "frame-ancestors 'none'",
-  "base-uri 'self'",
-  "object-src 'none'",
-].join("; ");
-
-const CSP_OBSERVEE = [
+const CSP = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
@@ -35,8 +27,7 @@ const ENTETES = [
   { key: "X-Frame-Options", value: "DENY" },
   { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), usb=(), payment=(self)" },
-  { key: "Content-Security-Policy", value: CSP_APPLIQUEE },
-  { key: "Content-Security-Policy-Report-Only", value: CSP_OBSERVEE },
+  { key: "Content-Security-Policy", value: CSP },
 ];
 
 const nextConfig: NextConfig = {
