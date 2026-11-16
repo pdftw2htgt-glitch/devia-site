@@ -12,7 +12,12 @@ import { dico, lien, type Langue } from "../i18n";
 // Sans session : connexion ou creation de compte. Avec session : la licence du compte et
 // ses formations, qui s ouvrent des que le compte a une licence (achat rattache par le
 // webhook Stripe, ou cle activee dans le logiciel).
-type Licence = { license_key: string; subscription_status: string; subscription_expires_at: string | null };
+type Licence = {
+  license_key: string;
+  subscription_status: string;
+  subscription_expires_at: string | null;
+  stripe_customer_id: string | null;
+};
 
 const URL_LOGICIEL = "https://devia-iota.vercel.app";
 
@@ -30,12 +35,20 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
   const [info, setInfo] = useState("");
   const [veutAcheter, setVeutAcheter] = useState(false);
   const [accepte, setAccepte] = useState(false);
+  const [tour, setTour] = useState(0);
   const [licence, setLicence] = useState<Licence | null>(null);
   const [licenceLue, setLicenceLue] = useState(false);
   const suiteLancee = useRef(false);
 
   useEffect(() => {
-    setVeutAcheter(new URLSearchParams(window.location.search).get("suite") === "acheter");
+    const params = new URLSearchParams(window.location.search);
+    setVeutAcheter(params.get("suite") === "acheter");
+    // Retour de Stripe apres la souscription : le webhook met quelques secondes a passer,
+    // la licence est relue un peu plus tard.
+    if (params.get("maintenance") === "ok") {
+      setInfo(t.maintenanceMerci);
+      setTimeout(() => setTour(1), 4000);
+    }
     supabase.auth.getSession().then(({ data }) => { setSession(data.session); setPret(true); });
     const { data: abo } = supabase.auth.onAuthStateChange((_evt, s) => { setSession(s); });
     return () => { abo.subscription.unsubscribe(); };
@@ -47,7 +60,7 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
     let actif = true;
     supabase
       .from("licenses")
-      .select("license_key, subscription_status, subscription_expires_at")
+      .select("license_key, subscription_status, subscription_expires_at, stripe_customer_id")
       .eq("user_id", session.user.id)
       .limit(1)
       .then(({ data }) => {
@@ -56,7 +69,7 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
         setLicenceLue(true);
       });
     return () => { actif = false; };
-  }, [session]);
+  }, [session, tour]);
 
   // Arrive ici depuis un bouton d achat : une fois connecte, le paiement repart tout seul.
   useEffect(() => {
@@ -99,6 +112,27 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
       });
       if (error) setErreur(traduireErreur(error.message));
       else if (data.session === null) setInfo(t.verifierMail);
+    }
+    setEnCours(false);
+  };
+
+  // Souscrire la maintenance ou ouvrir l espace client Stripe : le serveur verifie le compte.
+  const appelerStripe = async (route: string) => {
+    if (session === null) return;
+    setErreur("");
+    setInfo("");
+    setEnCours(true);
+    try {
+      const r = await fetch(route, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: "Bearer " + session.access_token },
+        body: JSON.stringify({ lang: lang }),
+      });
+      const j = await r.json();
+      if (j.url) { window.location.href = j.url; return; }
+      setErreur(j.error || dico(lang).achat.acErreur);
+    } catch (e) {
+      setErreur(e instanceof Error ? e.message : dico(lang).achat.acErreur);
     }
     setEnCours(false);
   };
@@ -188,10 +222,27 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
                   <p className="text-sm text-slate-600">{t.licenceCle}</p>
                   <p className="font-mono text-lg font-bold tracking-wider text-slate-900">{licence.license_key}</p>
                   <p className="text-sm text-slate-600">
-                    {t.maintenance} : {licence.subscription_status === "active" ? t.maintenanceActive : t.maintenanceAucune}
+                    {t.maintenance} : {licence.subscription_status === "active" ? t.maintenanceActive
+                      : (licence.subscription_status === "past_due" ? t.maintenanceRetard
+                      : (licence.subscription_status === "cancelled" ? t.maintenanceResiliee : t.maintenanceAucune))}
                     {licence.subscription_expires_at ? " - " + t.valableJusquau + " " + new Date(licence.subscription_expires_at).toLocaleDateString(lang === "en" ? "en-GB" : "fr-FR") : ""}
                   </p>
-                  <a href={URL_LOGICIEL} className="inline-block mt-2 bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-colors">{t.ouvrirLogiciel}</a>
+                  <div className="flex flex-wrap gap-3 mt-2">
+                    <a href={URL_LOGICIEL} className="inline-block bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-colors">{t.ouvrirLogiciel}</a>
+                    {achatOuvert && (licence.subscription_status === "active" || licence.subscription_status === "past_due") === false ? (
+                      <button type="button" onClick={() => appelerStripe("/api/maintenance")} disabled={enCours}
+                        className="bg-amber-500 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-amber-600 transition-colors disabled:opacity-60">
+                        {t.maintenanceSouscrire}
+                      </button>
+                    ) : null}
+                    {licence.stripe_customer_id ? (
+                      <button type="button" onClick={() => appelerStripe("/api/portail")} disabled={enCours}
+                        className="border border-slate-300 text-slate-700 px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-50 transition-colors disabled:opacity-60">
+                        {t.maintenanceGerer}
+                      </button>
+                    ) : null}
+                  </div>
+                  <p className="text-xs text-slate-500">{t.maintenanceTexte}</p>
                 </div>
               ) : null}
               {licenceLue && licence === null ? (

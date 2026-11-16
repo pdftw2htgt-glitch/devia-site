@@ -772,7 +772,13 @@
     "accepteCgu": "terms of use",
     "accepte2": "and the",
     "accepteConf": "privacy policy",
-    "errAccepte": "Tick the box to accept the terms of use and the privacy policy."
+    "errAccepte": "Tick the box to accept the terms of use and the privacy policy.",
+    "maintenanceRetard": "payment overdue",
+    "maintenanceResiliee": "cancelled",
+    "maintenanceSouscrire": "Subscribe to maintenance - €150 / month",
+    "maintenanceGerer": "Manage or cancel my maintenance",
+    "maintenanceTexte": "Maintenance gives access to extended support and new versions. No commitment, cancel at any time from this page.",
+    "maintenanceMerci": "Thank you. Your maintenance is being activated: it will appear here in a few seconds."
   },
   "cgu": {
     "titre": "Terms of Use",

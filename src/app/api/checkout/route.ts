@@ -74,7 +74,7 @@ export async function POST(req: Request) {
       // Le compte qui achete : le webhook y rattache la licence.
       client_reference_id: compte.id,
       customer_email: compte.email || undefined,
-      metadata: { user_id: compte.id },
+      metadata: { type: "licence", user_id: compte.id },
       // Fait apparaitre le champ "Code promotionnel" sur la page de paiement.
       allow_promotion_codes: true,
       name_collection: { business: { enabled: true, optional: false } },

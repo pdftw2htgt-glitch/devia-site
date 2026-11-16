@@ -771,7 +771,13 @@
     "accepteCgu": "conditions générales d'utilisation",
     "accepte2": "et la",
     "accepteConf": "politique de confidentialité",
-    "errAccepte": "Cochez la case pour accepter les CGU et la politique de confidentialité."
+    "errAccepte": "Cochez la case pour accepter les CGU et la politique de confidentialité.",
+    "maintenanceRetard": "paiement en retard",
+    "maintenanceResiliee": "résiliée",
+    "maintenanceSouscrire": "Souscrire la maintenance - 150 € / mois",
+    "maintenanceGerer": "Gérer ou résilier ma maintenance",
+    "maintenanceTexte": "La maintenance donne accès au support étendu et aux nouvelles versions. Sans engagement, résiliable à tout moment depuis cette page.",
+    "maintenanceMerci": "Merci. Votre maintenance est en cours d'activation : elle apparaîtra ici dans quelques secondes."
   },
   "cgu": {
     "titre": "Conditions générales d'utilisation",
