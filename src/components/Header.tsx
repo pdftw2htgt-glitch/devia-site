@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import SelecteurLangue from "./SelecteurLangue";
@@ -61,9 +62,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href={L("/")} className="flex items-center gap-2 group">
-          <div className="w-9 h-9 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-            D
-          </div>
+          {/* Le vrai logo (Mathis, 18/11). alt vide : le nom DEVIA suit en texte. */}
+          <Image src="/logo-devia.png" alt="" width={40} height={40} priority className="w-10 h-10 rounded-lg" />
           <span className="font-bold text-xl tracking-tight">DEVIA</span>
         </Link>
 
