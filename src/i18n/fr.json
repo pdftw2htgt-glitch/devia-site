@@ -777,7 +777,18 @@
     "maintenanceSouscrire": "Souscrire la maintenance - 150 € / mois",
     "maintenanceGerer": "Gérer ou résilier ma maintenance",
     "maintenanceTexte": "La maintenance donne accès au support étendu et aux nouvelles versions. Sans engagement, résiliable à tout moment depuis cette page.",
-    "maintenanceMerci": "Merci. Votre maintenance est en cours d'activation : elle apparaîtra ici dans quelques secondes."
+    "maintenanceMerci": "Merci. Votre maintenance est en cours d'activation : elle apparaîtra ici dans quelques secondes.",
+    "oubliIntro": "Indiquez l'adresse e-mail de votre compte : nous vous envoyons un lien pour choisir un nouveau mot de passe.",
+    "oubliEnvoyer": "Envoyer le lien",
+    "oubliEnvoye": "Si un compte existe avec cette adresse, un e-mail vient de partir. Ouvrez le lien qu'il contient pour choisir un nouveau mot de passe.",
+    "retourConnexion": "Retour à la connexion",
+    "nouveauMdpT": "Choisissez un nouveau mot de passe",
+    "nouveauMdp": "Nouveau mot de passe",
+    "confirmerMdp": "Confirmez le mot de passe",
+    "enregistrerMdp": "Enregistrer le mot de passe",
+    "mdpChange": "Mot de passe modifié. Il sert aussi pour vous connecter au logiciel.",
+    "errMdpDifferents": "Les deux mots de passe ne sont pas identiques.",
+    "errMdpIdentique": "Choisissez un mot de passe différent de l'ancien."
   },
   "cgu": {
     "titre": "Conditions générales d'utilisation",

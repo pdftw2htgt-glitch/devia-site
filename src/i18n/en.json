@@ -778,7 +778,18 @@
     "maintenanceSouscrire": "Subscribe to maintenance - €150 / month",
     "maintenanceGerer": "Manage or cancel my maintenance",
     "maintenanceTexte": "Maintenance gives access to extended support and new versions. No commitment, cancel at any time from this page.",
-    "maintenanceMerci": "Thank you. Your maintenance is being activated: it will appear here in a few seconds."
+    "maintenanceMerci": "Thank you. Your maintenance is being activated: it will appear here in a few seconds.",
+    "oubliIntro": "Enter your account email address: we will send you a link to choose a new password.",
+    "oubliEnvoyer": "Send the link",
+    "oubliEnvoye": "If an account exists with this address, an email is on its way. Open the link inside to choose a new password.",
+    "retourConnexion": "Back to sign in",
+    "nouveauMdpT": "Choose a new password",
+    "nouveauMdp": "New password",
+    "confirmerMdp": "Confirm the password",
+    "enregistrerMdp": "Save the password",
+    "mdpChange": "Password changed. It also works to sign in to the software.",
+    "errMdpDifferents": "The two passwords do not match.",
+    "errMdpIdentique": "Choose a password different from the old one."
   },
   "cgu": {
     "titre": "Terms of Use",

@@ -27,7 +27,7 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
   const L = (c: string) => lien(lang, c);
   const [session, setSession] = useState<Session | null>(null);
   const [pret, setPret] = useState(false);
-  const [mode, setMode] = useState<"connexion" | "inscription">("connexion");
+  const [mode, setMode] = useState<"connexion" | "inscription" | "oubli">("connexion");
   const [email, setEmail] = useState("");
   const [mdp, setMdp] = useState("");
   const [enCours, setEnCours] = useState(false);
@@ -36,6 +36,8 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
   const [veutAcheter, setVeutAcheter] = useState(false);
   const [accepte, setAccepte] = useState(false);
   const [tour, setTour] = useState(0);
+  const [recuperation, setRecuperation] = useState(false);
+  const [mdp2, setMdp2] = useState("");
   const [licence, setLicence] = useState<Licence | null>(null);
   const [licenceLue, setLicenceLue] = useState(false);
   const suiteLancee = useRef(false);
@@ -43,6 +45,9 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     setVeutAcheter(params.get("suite") === "acheter");
+    // Arrivee par le lien "mot de passe oublie" : l adresse porte type=recovery tant que
+    // Supabase ne l a pas lue, puis il emet PASSWORD_RECOVERY. On guette les deux.
+    if (window.location.hash.indexOf("type=recovery") >= 0) setRecuperation(true);
     // Retour de Stripe apres la souscription : le webhook met quelques secondes a passer,
     // la licence est relue un peu plus tard.
     if (params.get("maintenance") === "ok") {
@@ -50,7 +55,10 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
       setTimeout(() => setTour(1), 4000);
     }
     supabase.auth.getSession().then(({ data }) => { setSession(data.session); setPret(true); });
-    const { data: abo } = supabase.auth.onAuthStateChange((_evt, s) => { setSession(s); });
+    const { data: abo } = supabase.auth.onAuthStateChange((evt, s) => {
+      if (evt === "PASSWORD_RECOVERY") setRecuperation(true);
+      setSession(s);
+    });
     return () => { abo.subscription.unsubscribe(); };
   }, []);
 
@@ -91,6 +99,8 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
     if (s.includes("not confirmed")) return t.errNonConfirme;
     if (s.includes("already registered") || s.includes("already been registered")) return t.errDejaInscrit;
     if (s.includes("rate limit") || s.includes("too many")) return t.errTropDeTentatives;
+    if (s.includes("different from the old")) return t.errMdpIdentique;
+    if (s.includes("for security purposes")) return t.errTropDeTentatives;
     if (s.includes("password")) return t.errMdp;
     return m;
   };
@@ -101,7 +111,14 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
     setInfo("");
     if (mode === "inscription" && accepte === false) { setErreur(t.errAccepte); return; }
     setEnCours(true);
-    if (mode === "connexion") {
+    if (mode === "oubli") {
+      // Le lien de l e-mail revient ici, sur Mon compte : la personne reste sur le site.
+      const { error } = await supabase.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
+        redirectTo: window.location.origin + L("/compte"),
+      });
+      if (error) setErreur(traduireErreur(error.message));
+      else setInfo(t.oubliEnvoye);
+    } else if (mode === "connexion") {
       const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password: mdp });
       if (error) setErreur(traduireErreur(error.message));
     } else {
@@ -114,6 +131,25 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
       else if (data.session === null) setInfo(t.verifierMail);
     }
     setEnCours(false);
+  };
+
+  // Arrivee par le lien de l e-mail : la session de recuperation permet de fixer le
+  // nouveau mot de passe, valable aussi dans le logiciel (meme compte).
+  const changerMdp = async (e: FormEvent) => {
+    e.preventDefault();
+    setErreur("");
+    setInfo("");
+    if (mdp.length < 12 || /[a-zA-Z]/.test(mdp) === false || /[0-9]/.test(mdp) === false) { setErreur(t.errMdp); return; }
+    if ((mdp === mdp2) === false) { setErreur(t.errMdpDifferents); return; }
+    setEnCours(true);
+    const { error } = await supabase.auth.updateUser({ password: mdp });
+    setEnCours(false);
+    if (error) { setErreur(traduireErreur(error.message)); return; }
+    setMdp("");
+    setMdp2("");
+    setRecuperation(false);
+    setInfo(t.mdpChange);
+    window.history.replaceState(null, "", window.location.pathname);
   };
 
   // Souscrire la maintenance ou ouvrir l espace client Stripe : le serveur verifie le compte.
@@ -171,10 +207,12 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
               <button type="button" onClick={() => { setMode("inscription"); setErreur(""); setInfo(""); }} className={mode === "inscription" ? ongletActif : ongletInactif}>{t.ongletInscription}</button>
             </div>
             <form onSubmit={valider} className="space-y-4">
+              {mode === "oubli" ? <p className="text-sm text-slate-600">{t.oubliIntro}</p> : null}
               <div>
                 <label htmlFor="compte-email" className="block text-sm font-medium text-slate-700 mb-1">{t.email}</label>
                 <input id="compte-email" type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className={champ} />
               </div>
+              {mode === "oubli" ? null : (
               <div>
                 <label htmlFor="compte-mdp" className="block text-sm font-medium text-slate-700 mb-1">{t.motDePasse}</label>
                 <input id="compte-mdp" type="password" required minLength={mode === "inscription" ? 12 : undefined}
@@ -182,6 +220,7 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
                   value={mdp} onChange={(e) => setMdp(e.target.value)} className={champ} />
                 {mode === "inscription" ? <p className="mt-1 text-xs text-slate-500">{t.mdpRegle}</p> : null}
               </div>
+              )}
               {mode === "inscription" ? (
                 <label htmlFor="compte-accepte" className="flex items-start gap-2 text-sm text-slate-600">
                   <input id="compte-accepte" type="checkbox" required checked={accepte} onChange={(e) => setAccepte(e.target.checked)} className="mt-1" />
@@ -192,21 +231,47 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
                 </label>
               ) : null}
               <button type="submit" disabled={enCours} className="w-full bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors disabled:opacity-60">
-                {enCours ? t.enCours : (mode === "connexion" ? t.seConnecter : t.creer)}
+                {enCours ? t.enCours : (mode === "connexion" ? t.seConnecter : (mode === "oubli" ? t.oubliEnvoyer : t.creer))}
               </button>
             </form>
             {messages}
             {mode === "connexion" ? (
-              <p className="mt-6 text-sm text-slate-500">
-                {t.oubli} {t.oubliTexte} <a href={URL_LOGICIEL} className="text-amber-700 hover:underline">{t.ouvrirLogiciel}</a>
+              <p className="mt-6 text-sm">
+                <button type="button" onClick={() => { setMode("oubli"); setErreur(""); setInfo(""); }} className="text-amber-700 hover:underline">{t.oubli}</button>
+              </p>
+            ) : (mode === "oubli" ? (
+              <p className="mt-6 text-sm">
+                <button type="button" onClick={() => { setMode("connexion"); setErreur(""); setInfo(""); }} className="text-amber-700 hover:underline">{t.retourConnexion}</button>
               </p>
             ) : (
               <p className="mt-6 text-xs text-slate-500">{t.inscriptionPro}</p>
-            )}
+            ))}
           </div>
         ) : null}
 
-        {pret && session ? (
+        {pret && session && recuperation ? (
+          <div className={carte + " max-w-md"}>
+            <h2 className="text-xl font-semibold text-slate-900 mb-2">{t.nouveauMdpT}</h2>
+            <p className="text-sm text-slate-600 mb-6">{t.connecteEn} <span className="font-semibold text-slate-900">{session.user.email}</span></p>
+            <form onSubmit={changerMdp} className="space-y-4">
+              <div>
+                <label htmlFor="compte-nmdp1" className="block text-sm font-medium text-slate-700 mb-1">{t.nouveauMdp}</label>
+                <input id="compte-nmdp1" type="password" required autoComplete="new-password" value={mdp} onChange={(e) => setMdp(e.target.value)} className={champ} />
+                <p className="mt-1 text-xs text-slate-500">{t.mdpRegle}</p>
+              </div>
+              <div>
+                <label htmlFor="compte-nmdp2" className="block text-sm font-medium text-slate-700 mb-1">{t.confirmerMdp}</label>
+                <input id="compte-nmdp2" type="password" required autoComplete="new-password" value={mdp2} onChange={(e) => setMdp2(e.target.value)} className={champ} />
+              </div>
+              <button type="submit" disabled={enCours} className="w-full bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors disabled:opacity-60">
+                {enCours ? t.enCours : t.enregistrerMdp}
+              </button>
+            </form>
+            {messages}
+          </div>
+        ) : null}
+
+        {pret && session && recuperation === false ? (
           <div className="space-y-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <p className="text-sm text-slate-600">{t.connecteEn} <span className="font-semibold text-slate-900">{session.user.email}</span></p>
