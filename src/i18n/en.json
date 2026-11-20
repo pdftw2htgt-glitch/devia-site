@@ -32,11 +32,11 @@
     "specTitre": "What sets DEVIA apart",
     "specIntro": "What makes the difference day to day, beyond the feature list.",
     "s1Titre": "Innovation and growth",
-    "s1Texte": "DEVIA moves at the pace of AI itself. Every significant advance finds its way into the software, with updates several times a year.",
+    "s1Texte": "DEVIA pairs a leading AI model with its own timber framing engine. The AI reads your plans and requests; the DEVIA engine builds, calculates and checks every member to trade rules and Eurocode 5. That engine grows with every release, shaped by feedback from carpenters, with updates several times a year.",
     "s2Titre": "Support that listens",
     "s2Texte": "A question, a snag, an idea: our team answers quickly, and feedback from the workshop shapes the software directly.",
     "s3Titre": "A dedicated contact",
-    "s3Texte": "Someone who knows your company, your catalogue and the way you price. Close support, not an anonymous ticket.",
+    "s3Texte": "With the bespoke package, and only if you allow it: someone who knows your company, your catalogue and the way you price. Close support, not an anonymous ticket.",
     "s4Titre": "Tailored to your company",
     "s4Texte": "With the bespoke package, DEVIA is fitted to your business: options chosen together, your catalogue built in, your team trained.",
     "s4Lien": "Discover the bespoke package",
@@ -794,7 +794,7 @@
   "cgu": {
     "titre": "Terms of Use",
     "avis": "These terms must be reviewed by a lawyer before any real commercial use.",
-    "maj": "Last updated: 15 November 2026",
+    "maj": "Last updated: 20 November 2026",
     "u0T": "Article 1 - Purpose",
     "u0D": "These terms of use govern the use of the DEVIA website and software, published by Mathis Joveniaux EI (the Publisher). They apply to every DEVIA account holder (the User) and are accepted when the account is created. The terms of sale are set out separately.",
     "u1T": "Article 2 - Account and licence key",
@@ -811,7 +811,7 @@
     "u4T": "Article 5 - Artificial intelligence",
     "u4D": "Drawings are read by an artificial intelligence model and the result may contain errors: a misread dimension, a missing piece, a misidentified type of structure. The User checks the result before using it. Drawings and text sent to the AI are used only to produce the analysis; under the provider's commercial terms (Anthropic), they are not used to train its models. AI use is capped as stated in article 2 of the terms of sale.",
     "u5T": "Article 6 - Your drawings, your documents and their confidentiality",
-    "u5D": "Uploaded drawings, documents produced (quotes, take-offs, PDFs, IFC files), your prices and your catalogue belong to the User. The Publisher keeps them confidential: it uses them only to run the service and shares them only with the technical providers listed in the privacy policy, who are themselves bound by confidentiality.",
+    "u5D": "Uploaded drawings, documents produced (quotes, take-offs, PDFs, IFC files), your prices and your catalogue belong to the User. The Publisher keeps them confidential: it uses them only to run the service and shares them only with the technical providers listed in the privacy policy, who are themselves bound by confidentiality. On the bespoke package with maintenance, the User may authorise the Publisher, by ticking “I authorise dedicated follow-up” in the software, to view their profile, pricing settings, catalogue and quotes in order to provide dedicated follow-up. The User withdraws this authorisation at any time by unticking the box.",
     "u6T": "Article 7 - Your customers' data",
     "u6D": "Quotes and drawings may contain personal data about the User's customers (name, site address). For this data, the User is the controller and the Publisher acts as processor within the meaning of article 28 of the GDPR: it processes the data only to provide the service, on the User's instructions; it keeps the data secure and confidential; it uses only the providers listed in the privacy policy; it helps the User answer requests from the people concerned; it deletes the data when the account is closed, within the period set in article 9.",
     "u7T": "Article 8 - Software updates",
@@ -827,7 +827,7 @@
   },
   "confidentialite": {
     "titre": "Privacy Policy",
-    "maj": "Last updated: 15 November 2026",
+    "maj": "Last updated: 20 November 2026",
     "intro": "This page explains what data DEVIA processes, why, for how long and with whom. DEVIA is for professionals only, but information that identifies you, such as your email address, is still personal data.",
     "s0T": "Who processes your data",
     "s0D": "Mathis Joveniaux EI, publisher of DEVIA, 2164 route de Nancy, 74300 Nancy-sur-Cluses, France - SIRET 131 529 463 00013 - contact@devia.fr. For your own customers' data that you enter in DEVIA (name, site address, drawings), you are the controller and DEVIA acts as your processor (article 7 of the terms of use).",
@@ -860,6 +860,10 @@
     "d5b": "Answer you and fix the problem",
     "d5c": "Legitimate interest",
     "d5d": "3 years",
+    "d6a": "Profile, pricing settings, catalogue, quotes and AI usage log (bespoke package)",
+    "d6b": "Dedicated follow-up: support you and fit DEVIA to your company",
+    "d6c": "Consent: the “I authorise dedicated follow-up” box in the software, which you can withdraw at any time",
+    "d6d": "As long as the box is ticked and maintenance is active; viewed in place, never copied out of the database",
     "s2T": "Who it is shared with",
     "hPr": "Provider",
     "hR": "Role",
@@ -892,6 +896,6 @@
     "s4T": "Cookies",
     "s4D": "The website sets no advertising cookies and does not measure audience. When you sign in, your session is kept in your browser (local storage): this is needed to stay signed in, and it is cleared when you sign out. Payment takes place on Stripe's page, which applies its own policy.",
     "s5T": "Security",
-    "s5D": "Passwords are stored encrypted, traffic goes over HTTPS, and each account can read only its own data: access rules are enforced by the database itself."
+    "s5D": "Passwords are stored encrypted, traffic goes over HTTPS, and each account can read only its own data: access rules are enforced by the database itself. The one exception: on the bespoke package with maintenance, if you tick “I authorise dedicated follow-up”, the publisher can view your company profile; the database itself checks that consent, and access ends as soon as you untick the box."
   }
 }

@@ -3,7 +3,7 @@ import { dico, type Langue } from "../i18n";
 // Politique de confidentialite (RGPD). Elle decrit ce que le site et le logiciel font
 // reellement : a mettre a jour le jour ou un traitement change (mesure d audience,
 // nouvel outil, nouvelle duree de conservation).
-const NB_DONNEES = 6;
+const NB_DONNEES = 7;
 const PRESTATAIRES = [
   "https://supabase.com/legal/dpa",
   "https://vercel.com/legal/dpa",

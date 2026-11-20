@@ -32,11 +32,11 @@
     "specTitre": "Les spécificités de DEVIA",
     "specIntro": "Ce qui fait la différence au quotidien, au-delà des fonctionnalités.",
     "s1Titre": "Innovation et croissance",
-    "s1Texte": "DEVIA évolue au rythme des technologies d'intelligence artificielle. Chaque avancée majeure de l'IA est intégrée au logiciel, avec des mises à jour plusieurs fois par an.",
+    "s1Texte": "DEVIA associe une IA de pointe à son propre moteur de charpente. L'IA lit vos plans et vos demandes ; le moteur DEVIA construit, calcule et vérifie chaque pièce selon les règles du métier et l'Eurocode 5. Ce moteur s'enrichit à chaque version, nourri par les retours des charpentiers, avec des mises à jour plusieurs fois par an.",
     "s2Titre": "Support à l'écoute",
     "s2Texte": "Une question, un blocage, une idée : notre équipe répond rapidement, et chaque retour d'artisan influence directement le développement du logiciel.",
     "s3Titre": "Suivi privilégié et sur mesure",
-    "s3Texte": "Un interlocuteur qui connaît votre entreprise, votre catalogue et vos habitudes de chiffrage. Un suivi de proximité, pas un ticket anonyme.",
+    "s3Texte": "Avec la formule personnalisée, et si vous l'autorisez : un interlocuteur qui connaît votre entreprise, votre catalogue et vos habitudes de chiffrage. Un suivi de proximité, pas un ticket anonyme.",
     "s4Titre": "Logiciel sur mesure",
     "s4Texte": "Avec la formule personnalisée, DEVIA s'adapte à votre entreprise : options choisies ensemble, catalogue intégré, formation de votre équipe.",
     "s4Lien": "Découvrir la formule personnalisée",
@@ -793,7 +793,7 @@
   "cgu": {
     "titre": "Conditions générales d'utilisation",
     "avis": "Ces CGU doivent être validées par un juriste avant utilisation commerciale réelle.",
-    "maj": "Dernière mise à jour : 15 novembre 2026",
+    "maj": "Dernière mise à jour : 20 novembre 2026",
     "u0T": "Article 1 - Objet",
     "u0D": "Les présentes conditions générales d'utilisation (CGU) fixent les règles d'utilisation du site et du logiciel DEVIA, édités par Mathis Joveniaux EI (l'Éditeur). Elles s'appliquent à tout titulaire d'un compte DEVIA (l'Utilisateur) et sont acceptées à la création du compte. Les conditions de vente figurent dans les CGV.",
     "u1T": "Article 2 - Compte et clé de licence",
@@ -810,7 +810,7 @@
     "u4T": "Article 5 - Intelligence artificielle",
     "u4D": "La lecture des plans est faite par un modèle d'intelligence artificielle et peut contenir des erreurs : cote mal lue, pièce oubliée, type d'ouvrage mal identifié. L'Utilisateur contrôle le résultat avant de s'en servir. Les plans et textes envoyés à l'IA ne servent qu'à produire l'analyse ; selon les conditions commerciales du prestataire (Anthropic), ils ne servent pas à entraîner ses modèles. L'usage de l'IA est plafonné comme indiqué à l'article 2 des CGV.",
     "u5T": "Article 6 - Vos plans, vos documents et leur confidentialité",
-    "u5D": "Les plans téléversés, les documents produits (devis, métrés, PDF, fichiers IFC), vos prix et votre catalogue appartiennent à l'Utilisateur. L'Éditeur les garde confidentiels : il ne les utilise que pour faire fonctionner le service et ne les communique qu'aux prestataires techniques listés dans la politique de confidentialité, eux-mêmes tenus à la confidentialité.",
+    "u5D": "Les plans téléversés, les documents produits (devis, métrés, PDF, fichiers IFC), vos prix et votre catalogue appartiennent à l'Utilisateur. L'Éditeur les garde confidentiels : il ne les utilise que pour faire fonctionner le service et ne les communique qu'aux prestataires techniques listés dans la politique de confidentialité, eux-mêmes tenus à la confidentialité. En formule personnalisée avec maintenance, l'Utilisateur peut autoriser l'Éditeur, en cochant « J'autorise le suivi personnalisé » dans le logiciel, à consulter son profil, ses réglages de chiffrage, son catalogue et ses devis pour assurer son suivi personnalisé. Il retire cette autorisation à tout moment en décochant la case.",
     "u6T": "Article 7 - Données de vos clients",
     "u6D": "Les devis et les plans peuvent contenir des données personnelles des clients de l'Utilisateur (nom, adresse de chantier). Pour ces données, l'Utilisateur est responsable du traitement et l'Éditeur agit comme sous-traitant au sens de l'article 28 du RGPD : il ne les traite que pour fournir le service, sur instruction de l'Utilisateur ; il assure leur sécurité et leur confidentialité ; il ne fait appel qu'aux prestataires listés dans la politique de confidentialité ; il aide l'Utilisateur à répondre aux demandes des personnes concernées ; il supprime ces données à la fermeture du compte, dans le délai prévu à l'article 9.",
     "u7T": "Article 8 - Évolutions du logiciel",
@@ -826,7 +826,7 @@
   },
   "confidentialite": {
     "titre": "Politique de confidentialité",
-    "maj": "Dernière mise à jour : 15 novembre 2026",
+    "maj": "Dernière mise à jour : 20 novembre 2026",
     "intro": "Cette page explique quelles données DEVIA traite, pourquoi, combien de temps et avec qui. DEVIA est réservé aux professionnels, mais les informations qui vous identifient, comme votre adresse e-mail, restent des données personnelles.",
     "s0T": "Qui traite vos données",
     "s0D": "Mathis Joveniaux EI, éditeur de DEVIA, 2164 route de Nancy, 74300 Nancy-sur-Cluses, France - SIRET 131 529 463 00013 - contact@devia.fr. Pour les données de vos propres clients que vous saisissez dans DEVIA (nom, adresse de chantier, plans), c'est vous qui êtes responsable du traitement et DEVIA agit comme votre sous-traitant (article 7 des CGU).",
@@ -859,6 +859,10 @@
     "d5b": "Vous répondre et corriger",
     "d5c": "Intérêt légitime",
     "d5d": "3 ans",
+    "d6a": "Profil, réglages de chiffrage, catalogue, devis et journal d'usage de l'IA (formule personnalisée)",
+    "d6b": "Suivi personnalisé : vous accompagner et adapter DEVIA à votre entreprise",
+    "d6c": "Consentement : case « J'autorise le suivi personnalisé » dans le logiciel, retirable à tout moment",
+    "d6d": "Tant que la case est cochée et la maintenance active ; consultation sans copie hors de la base",
     "s2T": "À qui elles sont transmises",
     "hPr": "Prestataire",
     "hR": "Rôle",
@@ -891,6 +895,6 @@
     "s4T": "Cookies",
     "s4D": "Le site ne dépose aucun cookie publicitaire et ne mesure pas l'audience. Quand vous vous connectez, votre session est gardée dans votre navigateur (stockage local) : c'est indispensable pour rester connecté, et elle s'efface à la déconnexion. Le paiement se fait sur la page de Stripe, qui applique sa propre politique.",
     "s5T": "Sécurité",
-    "s5D": "Les mots de passe sont stockés chiffrés, les échanges passent en HTTPS, et chaque compte ne peut lire que ses propres données : les règles d'accès sont appliquées par la base de données elle-même."
+    "s5D": "Les mots de passe sont stockés chiffrés, les échanges passent en HTTPS, et chaque compte ne peut lire que ses propres données : les règles d'accès sont appliquées par la base de données elle-même. Seule exception : en formule personnalisée avec maintenance, si vous cochez « J'autorise le suivi personnalisé », l'éditeur peut consulter la fiche de votre entreprise ; c'est la base de données qui vérifie cet accord, et il cesse dès que vous décochez la case."
   }
 }
