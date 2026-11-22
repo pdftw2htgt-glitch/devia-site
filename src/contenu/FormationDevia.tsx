@@ -13,7 +13,7 @@ export default function FormationDevia({ lang }: { lang: Langue }) {
       <section className="bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold tracking-widest text-amber-600 uppercase mb-4">{t.eyebrow}</p>
+            <p className="text-sm font-semibold tracking-widest text-amber-700 uppercase mb-4">{t.eyebrow}</p>
             <h1 className="text-5xl font-bold tracking-tight text-slate-900 mb-6">{t.fdTitre}</h1>
             <p className="text-xl text-slate-600 leading-relaxed">{t.fdIntro}</p>
             <div className="mt-8 space-y-3">
@@ -39,10 +39,10 @@ export default function FormationDevia({ lang }: { lang: Langue }) {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {GUIDES.map((slug, i) => (
               <Link key={slug} href={L("/apprentissage/formation-devia/" + slug)} className="block bg-slate-50 rounded-2xl p-8 hover:shadow-md transition-shadow">
-                <div className="text-amber-600 font-bold text-sm mb-3">{"0" + (i + 1)}</div>
+                <div className="text-amber-700 font-bold text-sm mb-3">{"0" + (i + 1)}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{t["g" + i + "T"]}</h3>
                 <p className="text-slate-600 leading-relaxed">{t["g" + i + "D"]}</p>
-                <p className="text-amber-600 font-semibold text-sm mt-4">{t.fdLire}</p>
+                <p className="text-amber-700 font-semibold text-sm mt-4">{t.fdLire}</p>
               </Link>
             ))}
           </div>

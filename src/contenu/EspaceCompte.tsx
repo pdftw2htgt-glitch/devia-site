@@ -36,6 +36,7 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
   const [veutAcheter, setVeutAcheter] = useState(false);
   const [accepte, setAccepte] = useState(false);
   const [tour, setTour] = useState(0);
+  const [demandeFermeture, setDemandeFermeture] = useState("");
   const [recuperation, setRecuperation] = useState(false);
   const [mdp2, setMdp2] = useState("");
   const [licence, setLicence] = useState<Licence | null>(null);
@@ -171,6 +172,26 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
       setErreur(e instanceof Error ? e.message : dico(lang).achat.acErreur);
     }
     setEnCours(false);
+  };
+
+  // FERMETURE DU COMPTE (CGU art. 9) : une demande, enregistree comme un signalement et
+  // traitee a la main sous 30 jours (maintenance a resilier, factures gardees 10 ans).
+  const demanderFermeture = async () => {
+    if (session === null) return;
+    setErreur("");
+    setEnCours(true);
+    const { error } = await supabase.from("sav_tickets").insert({
+      user_id: session.user.id,
+      company_name: session.user.email || null,
+      title: "Demande de fermeture de compte",
+      description: "Demande envoyee depuis Mon compte pour " + (session.user.email || "") +
+        ". Maintenance : " + ((licence && licence.subscription_status) || "pas de licence") + ".",
+      category: "fermeture",
+      channel: "site",
+    });
+    setEnCours(false);
+    if (error) { setErreur(t.fermerErreur); return; }
+    setDemandeFermeture("envoyee");
   };
 
   const deconnecter = async () => {
@@ -331,7 +352,7 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
                     {GUIDES.map((slug, i) => (
                       <li key={slug}>
                         <Link href={L("/apprentissage/formation-devia/" + slug)} className="block rounded-xl border border-slate-200 px-5 py-4 hover:border-amber-400 hover:bg-amber-50 transition-colors">
-                          <div className="text-xs font-semibold tracking-widest text-amber-600 uppercase">{g.eyebrowGuide} {"0" + (i + 1)}</div>
+                          <div className="text-xs font-semibold tracking-widest text-amber-700 uppercase">{g.eyebrowGuide} {"0" + (i + 1)}</div>
                           <div className="font-semibold text-slate-900">{g["g" + i + "T"]}</div>
                           <div className="text-sm text-slate-600">{g["g" + i + "I"]}</div>
                         </Link>
@@ -346,6 +367,27 @@ export default function EspaceCompte({ lang, achatOuvert }: { lang: Langue; acha
               ) : (
                 <p className="text-slate-600">{t.formationsVerrou}</p>
               )}
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 px-8 py-6">
+              <h2 className="text-base font-semibold text-slate-900 mb-1">{t.fermerT}</h2>
+              {demandeFermeture === "envoyee" ? (
+                <p className="text-sm text-green-700">{t.fermerEnvoye}</p>
+              ) : (demandeFermeture === "confirmer" ? (
+                <div className="space-y-3">
+                  <p className="text-sm text-slate-600">{t.fermerConfirmer}</p>
+                  <div className="flex flex-wrap items-center gap-4">
+                    <button type="button" onClick={demanderFermeture} disabled={enCours}
+                      className="bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-800 transition-colors disabled:opacity-60">{t.fermerOui}</button>
+                    <button type="button" onClick={() => setDemandeFermeture("")} className="text-sm font-medium text-slate-600 hover:text-slate-900 underline">{t.fermerNon}</button>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <p className="text-sm text-slate-600 mb-3">{t.fermerTexte}</p>
+                  <button type="button" onClick={() => setDemandeFermeture("confirmer")} className="text-sm font-medium text-red-700 hover:text-red-800 underline">{t.fermerBouton}</button>
+                </div>
+              ))}
             </div>
           </div>
         ) : null}

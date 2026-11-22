@@ -75,6 +75,7 @@ export default function Tarifs({ lang }: { lang: Langue }) {
             </Link>
           </div>
         </div>
+        <p className="max-w-5xl mx-auto px-6 mt-6 text-center text-sm text-slate-500">{t.mentionTva}</p>
 
         <CalculateurRentabilite />
 

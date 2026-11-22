@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { dico, lien, type Langue } from "../i18n";
 
@@ -19,9 +20,8 @@ export default function Footer() {
         {/* Logo + tagline */}
         <div className="md:col-span-2">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-9 h-9 bg-white rounded-lg flex items-center justify-center text-slate-900 font-bold text-sm">
-              D
-            </div>
+            {/* Le vrai logo (Mathis, 21/11). Liseré gris : son fond noir se detache du pied de page. */}
+            <Image src="/logo-devia.png" alt="" width={36} height={36} className="w-9 h-9 rounded-lg ring-1 ring-slate-600" />
             <span className="font-bold text-xl tracking-tight text-white">DEVIA</span>
           </div>
           <p className="text-sm text-slate-400 max-w-md leading-relaxed">{t.tagline}</p>

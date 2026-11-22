@@ -156,7 +156,7 @@ export default function Accueil({ lang }: { lang: Langue }) {
               <h3 className="text-xl font-bold text-slate-900 mb-3">{t.s4Titre}</h3>
               <p className="text-slate-600 leading-relaxed">
                 {t.s4Texte}{" "}
-                <Link href={lien(lang, "/tarifs")} className="text-amber-600 font-semibold hover:text-amber-700">
+                <Link href={lien(lang, "/tarifs")} className="text-amber-700 font-semibold hover:text-amber-800">
                   {t.s4Lien}
                 </Link>
               </p>

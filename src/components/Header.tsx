@@ -14,6 +14,12 @@ export default function Header() {
   const lang: Langue = (chemin === "/en" || chemin.startsWith("/en/")) ? "en" : "fr";
   const t = dico(lang).nav;
   const L = (c: string) => lien(lang, c);
+  // Apres un clic dans un menu deroulant, le focus reste sur le lien et garderait le
+  // menu ouvert (focus-within) : on le relache.
+  const lacherFocus = () => {
+    const actif = document.activeElement;
+    if (actif instanceof HTMLElement) actif.blur();
+  };
 
   // L attribut lang de la page suit la langue affichee. Le layout racine ecrit "fr" par
   // defaut ; ici on le corrige sur les pages anglaises, et on le remet a "fr" au retour.
@@ -74,6 +80,7 @@ export default function Header() {
               <div key={link.href} className="relative group">
                 <Link
                   href={L("/solutions")}
+                  onClick={lacherFocus}
                   className="flex items-center gap-1 text-slate-600 hover:text-slate-900 transition-colors text-sm font-medium"
                 >
                   Solutions
@@ -81,13 +88,13 @@ export default function Header() {
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </Link>
-                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block">
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block group-focus-within:block">
                   <div className="w-[560px] bg-white border border-slate-200 rounded-2xl shadow-xl p-6 grid grid-cols-2 gap-6">
                     <div>
                       <div className="text-xs font-bold uppercase tracking-wide text-slate-400 mb-3">{t.grpOuvrages}</div>
                       <div className="flex flex-col gap-1">
                         {solutionsMenu.ouvrages.map((s) => (
-                          <Link key={s.href} href={s.href} className="rounded-lg px-3 py-2 hover:bg-slate-50 transition-colors">
+                          <Link key={s.href} href={s.href} onClick={lacherFocus} className="rounded-lg px-3 py-2 hover:bg-slate-50 transition-colors">
                             <div className="text-sm font-semibold text-slate-900">{s.label}</div>
                             <div className="text-xs text-slate-500">{s.desc}</div>
                           </Link>
@@ -98,7 +105,7 @@ export default function Header() {
                       <div className="text-xs font-bold uppercase tracking-wide text-slate-400 mb-3">{t.grpServices}</div>
                       <div className="flex flex-col gap-1">
                         {solutionsMenu.services.map((s) => (
-                          <Link key={s.href} href={s.href} className="rounded-lg px-3 py-2 hover:bg-slate-50 transition-colors">
+                          <Link key={s.href} href={s.href} onClick={lacherFocus} className="rounded-lg px-3 py-2 hover:bg-slate-50 transition-colors">
                             <div className="text-sm font-semibold text-slate-900">{s.label}</div>
                             <div className="text-xs text-slate-500">{s.desc}</div>
                           </Link>
@@ -112,6 +119,7 @@ export default function Header() {
               <div key={link.href} className="relative group">
                 <Link
                   href={L("/apprentissage")}
+                  onClick={lacherFocus}
                   className="flex items-center gap-1 text-slate-600 hover:text-slate-900 transition-colors text-sm font-medium"
                 >
                   Apprentissage
@@ -119,10 +127,10 @@ export default function Header() {
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </Link>
-                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block">
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 hidden group-hover:block group-focus-within:block">
                   <div className="w-72 bg-white border border-slate-200 rounded-2xl shadow-xl p-4 flex flex-col gap-1">
                     {apprentissageMenu.map((s) => (
-                      <Link key={s.href} href={s.href} className="rounded-lg px-3 py-2 hover:bg-slate-50 transition-colors">
+                      <Link key={s.href} href={s.href} onClick={lacherFocus} className="rounded-lg px-3 py-2 hover:bg-slate-50 transition-colors">
                         <div className="text-sm font-semibold text-slate-900">{s.label}</div>
                         <div className="text-xs text-slate-500">{s.desc}</div>
                       </Link>

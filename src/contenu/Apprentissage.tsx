@@ -44,7 +44,7 @@ export default function Apprentissage({ lang }: { lang: Langue }) {
                     </div>
                   ))}
                 </div>
-                <span className="mt-auto text-amber-600 font-semibold group-hover:underline">{t.enSavoirPlus}</span>
+                <span className="mt-auto text-amber-700 font-semibold group-hover:underline">{t.enSavoirPlus}</span>
               </Link>
             ))}
           </div>

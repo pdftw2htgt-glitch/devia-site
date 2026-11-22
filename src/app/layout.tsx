@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 // variable suffit et les apercus de partage suivent.
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://devia-site.vercel.app";
 const TITRE = "DEVIA - Logiciel professionnel de devis charpente";
-const DESC = "Generez vos devis charpente en quelques secondes grace a l'IA. Visualisation 3D, calculs Eurocode, export PDF. L'alternative moderne aux logiciels traditionnels.";
+const DESC = "Générez vos devis charpente en quelques minutes grâce à l'IA. Visualisation 3D, calculs Eurocode 5, export PDF. L'alternative moderne aux logiciels traditionnels.";
 
 export const metadata: Metadata = {
   // Sans metadataBase, Next.js ne sait pas rendre absolue l adresse de l image de

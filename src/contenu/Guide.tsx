@@ -24,7 +24,7 @@ export default function Guide({ lang, slug }: { lang: Langue; slug: string }) {
       <section className="bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold tracking-widest text-amber-600 uppercase mb-4">{t.eyebrowGuide} {"0" + (i + 1)}</p>
+            <p className="text-sm font-semibold tracking-widest text-amber-700 uppercase mb-4">{t.eyebrowGuide} {"0" + (i + 1)}</p>
             <h1 className="text-5xl font-bold tracking-tight text-slate-900 mb-6">{t["g" + i + "T"]}</h1>
             <p className="text-xl text-slate-600 leading-relaxed">{t["g" + i + "I"]}</p>
           </div>
