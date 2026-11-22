@@ -700,8 +700,8 @@
     "m1T": "Hébergement",
     "m2T": "Données personnelles",
     "m2D": "Le traitement de vos données personnelles est décrit dans la politique de confidentialité (lien en bas de page).",
-    "m3T": "Cookies",
-    "m3D": "Le site ne dépose aucun cookie publicitaire et ne mesure pas l'audience. Le détail figure dans la politique de confidentialité.",
+    "m3T": "Cookies et mesure d'audience",
+    "m3D": "Le site ne dépose aucun cookie. Il mesure son audience de façon anonyme, sans cookie ni traceur tiers ; le détail et le moyen de refuser cette mesure figurent dans la politique de confidentialité.",
     "m4T": "Propriété intellectuelle",
     "m4D": "L'ensemble du contenu du site (textes, images, logos, code source) est protégé par le droit d'auteur. Toute reproduction non autorisée est interdite.",
     "m0L1": "DEVIA est édité par Mathis Joveniaux, entrepreneur individuel (EI).",
@@ -835,7 +835,7 @@
   },
   "confidentialite": {
     "titre": "Politique de confidentialité",
-    "maj": "Dernière mise à jour : 20 novembre 2026",
+    "maj": "Dernière mise à jour : 22 novembre 2026",
     "intro": "Cette page explique quelles données DEVIA traite, pourquoi, combien de temps et avec qui. DEVIA est réservé aux professionnels, mais les informations qui vous identifient, comme votre adresse e-mail, restent des données personnelles.",
     "s0T": "Qui traite vos données",
     "s0D": "Mathis Joveniaux EI, éditeur de DEVIA, 2164 route de Nancy, 74300 Nancy-sur-Cluses, France - SIRET 131 529 463 00013 - contact@devia.fr. Pour les données de vos propres clients que vous saisissez dans DEVIA (nom, adresse de chantier, plans), c'est vous qui êtes responsable du traitement et DEVIA agit comme votre sous-traitant (article 7 des CGU).",
@@ -872,6 +872,10 @@
     "d6b": "Suivi personnalisé : vous accompagner et adapter DEVIA à votre entreprise",
     "d6c": "Consentement : case « J'autorise le suivi personnalisé » dans le logiciel, retirable à tout moment",
     "d6d": "Tant que la case est cochée et la maintenance active ; consultation sans copie hors de la base",
+    "d7a": "Mesure d'audience du site : page vue, site d'où vous venez, campagne (étiquettes « utm »), type d'appareil, numéro d'onglet tiré au hasard",
+    "d7b": "Savoir quelles pages sont lues et d'où viennent les visiteurs, pour améliorer le site",
+    "d7c": "Intérêt légitime ; mesure dispensée de consentement selon les conditions de la CNIL, refusable à tout moment",
+    "d7d": "25 mois, puis effacement automatique",
     "s2T": "À qui elles sont transmises",
     "hPr": "Prestataire",
     "hR": "Rôle",
@@ -901,9 +905,16 @@
     "s2D": "Rien n'est vendu ni utilisé pour de la publicité.",
     "s3T": "Vos droits",
     "s3D": "Vous pouvez demander l'accès à vos données, leur rectification, leur effacement, leur limitation ou leur portabilité, et vous opposer à un traitement : par e-mail à contact@devia.fr ou par courrier à l'adresse ci-dessus. Nous répondons sous un mois. Vous pouvez aussi adresser une réclamation à la CNIL (cnil.fr).",
-    "s4T": "Cookies",
-    "s4D": "Le site ne dépose aucun cookie publicitaire et ne mesure pas l'audience. Quand vous vous connectez, votre session est gardée dans votre navigateur (stockage local) : c'est indispensable pour rester connecté, et elle s'efface à la déconnexion. Le paiement se fait sur la page de Stripe, qui applique sa propre politique.",
+    "s4T": "Cookies et mesure d'audience",
+    "s4D": "Le site ne dépose aucun cookie. Pour compter ses visites, il garde le temps de l'onglet un numéro tiré au hasard (stockage de session du navigateur), effacé à la fermeture de l'onglet, et note la page vue, le site d'où vous venez, l'éventuelle campagne (étiquettes « utm ») et le type d'appareil. DEVIA n'enregistre ni votre adresse IP, ni votre nom, ni votre e-mail, ne relie pas ces visites à votre compte, et ces statistiques anonymes ne servent qu'à DEVIA. Cette mesure suit les conditions de la CNIL pour être dispensée de consentement ; vous pouvez la refuser avec le bouton ci-dessous ou le lien « Ne pas mesurer mes visites » en bas de chaque page, et votre choix est gardé dans votre navigateur. Si votre navigateur envoie un signal « ne pas me suivre » (Global Privacy Control ou Do Not Track), rien n'est mesuré. Quand vous vous connectez, votre session est gardée dans votre navigateur (stockage local) : c'est indispensable pour rester connecté, et elle s'efface à la déconnexion. Le paiement se fait sur la page de Stripe, qui applique sa propre politique.",
     "s5T": "Sécurité",
     "s5D": "Les mots de passe sont stockés chiffrés, les échanges passent en HTTPS, et chaque compte ne peut lire que ses propres données : les règles d'accès sont appliquées par la base de données elle-même. Seule exception : en formule personnalisée avec maintenance, si vous cochez « J'autorise le suivi personnalisé », l'éditeur peut consulter la fiche de votre entreprise ; c'est la base de données qui vérifie cet accord, et il cesse dès que vous décochez la case."
+  },
+  "mesure": {
+    "refuser": "Ne pas mesurer mes visites",
+    "reactiver": "Réactiver la mesure de mes visites",
+    "etatActif": "Vos visites sont comptées de façon anonyme.",
+    "etatRefus": "Vos visites ne sont plus comptées depuis ce navigateur.",
+    "etatSignal": "Votre navigateur demande à ne pas être suivi : vos visites ne sont pas comptées."
   }
 }

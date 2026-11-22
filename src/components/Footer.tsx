@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import ChoixMesure from "./ChoixMesure";
 import { usePathname } from "next/navigation";
 import { dico, lien, type Langue } from "../i18n";
 
@@ -57,6 +58,7 @@ export default function Footer() {
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-6 py-6 text-xs text-slate-500 flex flex-col md:flex-row justify-between gap-2">
           <p>{t.droits}</p>
+          <ChoixMesure lang={lang} discret />
           <p>{t.concu}</p>
         </div>
       </div>

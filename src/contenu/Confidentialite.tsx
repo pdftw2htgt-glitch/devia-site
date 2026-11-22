@@ -1,9 +1,10 @@
 import { dico, type Langue } from "../i18n";
+import ChoixMesure from "@/components/ChoixMesure";
 
 // Politique de confidentialite (RGPD). Elle decrit ce que le site et le logiciel font
 // reellement : a mettre a jour le jour ou un traitement change (mesure d audience,
 // nouvel outil, nouvelle duree de conservation).
-const NB_DONNEES = 7;
+const NB_DONNEES = 8;
 const PRESTATAIRES = [
   "https://supabase.com/legal/dpa",
   "https://vercel.com/legal/dpa",
@@ -92,6 +93,7 @@ export default function Confidentialite({ lang }: { lang: Langue }) {
 
           <h2 className={h2}>{t.s4T}</h2>
           <p>{t.s4D}</p>
+          <ChoixMesure lang={lang} />
 
           <h2 className={h2}>{t.s5T}</h2>
           <p>{t.s5D}</p>

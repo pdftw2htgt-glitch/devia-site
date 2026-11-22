@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { dico, type Langue } from "../i18n";
+import { trackEvent } from "@/components/SiteTracker";
 
 // Bouton d achat : demande une session de paiement au serveur, puis envoie l acheteur
 // chez Stripe. Le code promo se saisit sur la page de Stripe, pas ici.
@@ -18,6 +19,7 @@ export default function BoutonAchat({
   const [erreur, setErreur] = useState("");
 
   const acheter = async () => {
+    trackEvent("cta_acheter");
     setCharge(true);
     setErreur("");
     try {

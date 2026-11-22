@@ -700,8 +700,8 @@
     "m1T": "Hosting",
     "m2T": "Personal data",
     "m2D": "How your personal data is processed is described in the privacy policy (link at the bottom of the page).",
-    "m3T": "Cookies",
-    "m3D": "The website sets no advertising cookies and does not measure audience. Details are in the privacy policy.",
+    "m3T": "Cookies and audience measurement",
+    "m3D": "The website sets no cookies. It measures its audience anonymously, without cookies or third-party trackers; details, and how to refuse this measurement, are in the privacy policy.",
     "m4T": "Intellectual property",
     "m4D": "All the content of this site (text, images, logos, source code) is protected by copyright. Any unauthorised reproduction is prohibited.",
     "prevaut": "Courtesy translation. Only the French version is legally binding.",
@@ -836,7 +836,7 @@
   },
   "confidentialite": {
     "titre": "Privacy Policy",
-    "maj": "Last updated: 20 November 2026",
+    "maj": "Last updated: 22 November 2026",
     "intro": "This page explains what data DEVIA processes, why, for how long and with whom. DEVIA is for professionals only, but information that identifies you, such as your email address, is still personal data.",
     "s0T": "Who processes your data",
     "s0D": "Mathis Joveniaux EI, publisher of DEVIA, 2164 route de Nancy, 74300 Nancy-sur-Cluses, France - SIRET 131 529 463 00013 - contact@devia.fr. For your own customers' data that you enter in DEVIA (name, site address, drawings), you are the controller and DEVIA acts as your processor (article 7 of the terms of use).",
@@ -873,6 +873,10 @@
     "d6b": "Dedicated follow-up: support you and fit DEVIA to your company",
     "d6c": "Consent: the “I authorise dedicated follow-up” box in the software, which you can withdraw at any time",
     "d6d": "As long as the box is ticked and maintenance is active; viewed in place, never copied out of the database",
+    "d7a": "Website audience measurement: page viewed, site you came from, campaign (“utm” tags), device type, random tab number",
+    "d7b": "Know which pages are read and where visitors come from, to improve the website",
+    "d7c": "Legitimate interest; measurement exempt from consent under the CNIL conditions, can be refused at any time",
+    "d7d": "25 months, then automatic deletion",
     "s2T": "Who it is shared with",
     "hPr": "Provider",
     "hR": "Role",
@@ -902,9 +906,16 @@
     "s2D": "Nothing is sold or used for advertising.",
     "s3T": "Your rights",
     "s3D": "You can ask to access, correct, erase, restrict or port your data, and object to processing: by email to contact@devia.fr or by post to the address above. We reply within one month. You can also lodge a complaint with the CNIL, the French data protection authority (cnil.fr).",
-    "s4T": "Cookies",
-    "s4D": "The website sets no advertising cookies and does not measure audience. When you sign in, your session is kept in your browser (local storage): this is needed to stay signed in, and it is cleared when you sign out. Payment takes place on Stripe's page, which applies its own policy.",
+    "s4T": "Cookies and audience measurement",
+    "s4D": "The website sets no cookies. To count its visits, it keeps a random number for the life of the tab (browser session storage), deleted when the tab closes, and records the page viewed, the site you came from, any campaign (“utm” tags) and the device type. DEVIA does not record your IP address, name or email, does not link these visits to your account, and these anonymous statistics are used by DEVIA only. This measurement follows the CNIL conditions for exemption from consent; you can refuse it with the button below or the “Don't measure my visits” link at the bottom of every page, and your choice is kept in your browser. If your browser sends a “do not track” signal (Global Privacy Control or Do Not Track), nothing is measured. When you sign in, your session is kept in your browser (local storage): this is needed to stay signed in, and it is cleared when you sign out. Payment takes place on Stripe's page, which applies its own policy.",
     "s5T": "Security",
     "s5D": "Passwords are stored encrypted, traffic goes over HTTPS, and each account can read only its own data: access rules are enforced by the database itself. The one exception: on the bespoke package with maintenance, if you tick “I authorise dedicated follow-up”, the publisher can view your company profile; the database itself checks that consent, and access ends as soon as you untick the box."
+  },
+  "mesure": {
+    "refuser": "Don't measure my visits",
+    "reactiver": "Measure my visits again",
+    "etatActif": "Your visits are counted anonymously.",
+    "etatRefus": "Your visits are no longer counted from this browser.",
+    "etatSignal": "Your browser asks not to be tracked: your visits are not counted."
   }
 }

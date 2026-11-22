@@ -4,6 +4,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { supabase } from "@/lib/supabaseClient";
 import { dico, type Langue } from "../i18n";
+import { trackEvent } from "@/components/SiteTracker";
 
 type Etat = "idle" | "envoi" | "ok" | "erreur";
 
@@ -42,6 +43,7 @@ export default function SignalerProbleme() {
       setMessageErreur(error.message);
     } else {
       setEtat("ok");
+      trackEvent("signalement_envoye");
       setTitre("");
       setDescription("");
       setEmail("");

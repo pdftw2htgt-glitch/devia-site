@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SiteTracker from "@/components/SiteTracker";
+import { Suspense } from "react";
 
 // Meme source que sitemap.ts et robots.ts : le jour ou devia.fr est branche, la
 // variable suffit et les apercus de partage suivent.
@@ -36,6 +38,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="bg-white text-slate-900 antialiased">
+        <Suspense fallback={null}>
+          <SiteTracker />
+        </Suspense>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

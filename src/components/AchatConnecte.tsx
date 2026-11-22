@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
+import { trackEvent } from "./SiteTracker";
 import { dico, lien, type Langue } from "../i18n";
 
 // Demande une session de paiement au serveur, au nom du compte connecte. Le serveur verifie
@@ -32,6 +33,7 @@ export default function AchatConnecte({
   const [erreur, setErreur] = useState("");
 
   const acheter = async () => {
+    trackEvent("cta_acheter");
     setCharge(true);
     setErreur("");
     const { data } = await supabase.auth.getSession();
