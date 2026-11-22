@@ -176,7 +176,10 @@ export async function POST(req: Request) {
       if (sienne.error === null && sienne.data && sienne.data.length === 0) proprietaire = idCompte;
     }
 
-    const ins = await sb.from("licenses").insert({
+    // Prix reellement paye (centimes chez Stripe). Un code promo a 100 % donne 0 : c est
+    // une vraie vente a 0 EUR, DEVIA Stats l affiche comme telle.
+    const prixAchat = (typeof session.amount_total === "number") ? session.amount_total / 100 : null;
+    const ligne = {
       license_key: cle,
       user_id: proprietaire,
       installed_version: ref.installed_version,
@@ -189,7 +192,13 @@ export async function POST(req: Request) {
       subscription_expires_at: dansUnAn,
       stripe_purchase_id: session.id,
       stripe_customer_id: typeof session.customer === "string" ? session.customer : null,
-    });
+    };
+    let ins = await sb.from("licenses").insert({ ...ligne, prix_achat_eur: prixAchat });
+    if (ins.error && ins.error.message.includes("prix_achat_eur")) {
+      // Colonne pas encore creee dans Supabase : la vente passe avant la statistique.
+      console.error("[DEVIA] colonne prix_achat_eur absente, licence creee sans le prix");
+      ins = await sb.from("licenses").insert(ligne);
+    }
     if (ins.error) {
       console.error("[DEVIA] insertion licence :", ins.error.message);
       return NextResponse.json({ error: ins.error.message }, { status: 500 });
